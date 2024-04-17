@@ -1,17 +1,15 @@
 .App {
   text-align: center;
-  background-color: #282c34; // cor padrão de fundo
-}
+  // background-color: #282c34; // cor padrão de fundo
+  background-color: black;
+} 
+
+
 
 .image-home {
   height: 538px;
   width: 996px;
-  
 }
-
-
-
-
 
 .App-header {
   
@@ -22,7 +20,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} 
 
 .App-link {
   color: #61dafb;
