@@ -11,25 +11,25 @@ export default function Contato() {
         </div>
 
         <div className='componentes'>
-          <a href='#'>
+          <a href='/vitrine'>
             <p>shop all</p>
           </a>
 
-          <a href='#'>
+          <a href='/'>
             <p>home</p>
           </a>
 
-          <a href='#'>
+          <a href='/contato'>
             <p>contato</p>
           </a>
 
-          <a href='#'>
+          <a href='https://www.instagram.com/featuresx/'>
             <p>Instagram</p>
           </a>
         </div>
 
         <div>
-          <a href='#'>
+          <a href='/'>
             A B
           </a>
         </div>
