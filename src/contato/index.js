@@ -55,6 +55,31 @@ export default function Contato() {
           <button>E N V I A R</button>
         </div>
       </section>
+
+      <section className='page-footer'>
+        <div>
+          <img className='img-header' src={logo} alt="header logo"/>
+        </div>
+
+        <footer>
+          <div>
+            <p>contato@gmail.com</p>
+            <p>(11) 4002-8922 </p>
+            <p>CNPJ 00.000.000/0000-00</p>
+          </div>
+          
+          <a href='#'>
+            <p>Informações</p>
+          </a>
+          <a href='#'>
+            <p>Política de Privacidade</p>
+          </a>
+          <a href='#'>
+            <p>Termos de Uso</p>
+          </a>
+         
+        </footer>
+      </section>
     </>
   );
 }
