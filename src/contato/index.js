@@ -1,13 +1,13 @@
 import './index.scss';
 
-import logo from "../components/images/logo-header.png"
+// import logo from "/assets/images/logo-header.png"
 
 export default function Contato() {
   return (
     <>
       <section className='page-header'>
         <div>
-          <img className='img-header' src={logo} alt="header logo"/>
+          <img className='img-header' src='/assets/images/logo-header.png' alt="header logo"/>
         </div>
 
         <div className='componentes'>
@@ -58,7 +58,7 @@ export default function Contato() {
 
       <section className='page-footer'>
         <div>
-          <img className='img-header' src={logo} alt="header logo"/>
+          <img className='img-header' src='/assets/images/logo-header.png' alt="header logo"/>
         </div>
 
         <footer>
@@ -68,13 +68,13 @@ export default function Contato() {
             <p>CNPJ 00.000.000/0000-00</p>
           </div>
           
-          <a href='#'>
+          <a href='/'>
             <p>Informações</p>
           </a>
-          <a href='#'>
+          <a href='/'>
             <p>Política de Privacidade</p>
           </a>
-          <a href='#'>
+          <a href='/'>
             <p>Termos de Uso</p>
           </a>
          

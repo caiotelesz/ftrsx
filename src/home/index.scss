@@ -2,46 +2,20 @@
   text-align: center;
   background-color: #282c34; // cor padrão de fundo
   //background-color: black;
-} 
 
-// headerzinhu
-
-.page-header {
+  // imagem
   display: flex;
-  justify-content: space-between;
-  background-color: #D9D9D9;
+  justify-content: center;
+  margin-top: 150px;
 }
-
-.page-header > div {
-  padding: 15px 35px;
-}
-
-.componentes {
+ 
+/* .dov {
   display: flex;
-  flex-direction: row;
-  gap: 30px;
-}
+  justify-content: center;
+  margin-top: 150px;
+} */
 
-.componentes a {
-  text-decoration: none;
-  text-transform: 30px;
-  color: #979797;
-  font-weight: bold;
-  font-style: italic;
-}
-
-.componentes a:hover{
-  color: #000;
-}
-
-
-
-.image-home {
-  margin-top: 100px;
-  height: 538px;
-  width: 996px;
-}
-
+/*
 .App-header {
   
   min-height: 100vh;
@@ -65,3 +39,4 @@
     transform: rotate(360deg);
   }
 }
+*/
