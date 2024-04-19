@@ -8,7 +8,7 @@ export default function App() {
   return (
     <div className="App">
         <Link to="/vitrine">
-          <img className="image-home" src='/assets/gifs/giflogos.gif' alt="Logo-Home" />
+          <img className="image-home" src='/assets/gifs/giflogo.gif' alt="Logo-Home" />
         </Link>
     </div>
   );
