@@ -42,8 +42,16 @@ export default function Vitrine () {
             <img className='icons' src='/assets/images/profile.png' alt='profile' />
           </a>
         
+
+          
           
         </div>
+      </section>
+
+      
+
+      <section className='secao2'>
+        <img src='/assets/images/frase.png' />
       </section>
       
       <Link></Link>

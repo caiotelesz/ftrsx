@@ -1,4 +1,5 @@
 import './index.scss';
+import { Link } from 'react-router-dom';
 
 // import logo from "/assets/images/logo-header.png"
 
@@ -7,7 +8,9 @@ export default function Contato() {
     <>
       <section className='page-header'>
         <div>
+          <Link to="/">
           <img className='img-header' src='/assets/images/logo-header.png' alt="header logo"/>
+          </Link>
         </div>
 
         <div className='componentes'>
@@ -28,16 +31,18 @@ export default function Contato() {
           </a>
         </div>
 
-        <div>
-          <a href='/login'>
-            <img src='/assets/images/profile.png' alt='profile' />
-          </a>
-        </div>
+        <div className='icons-header'>
+          <div>
+            <a href='/login'>
+              <img src='/assets/images/profile.png' alt='profile' />
+            </a>
+          </div>
 
-        <div>
-          <a href='/'>
-            <img src='/assets/images/search.png' alt='' />
-          </a>
+          <div>
+            <a href='/'>
+              <img src='/assets/images/search.png' alt='' />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -64,7 +69,9 @@ export default function Contato() {
 
       <section className='page-footer'>
         <div>
-          <img className='img-footer' src='/assets/images/logo-header.png' alt="header logo"/>
+          <Link to="/">
+            <img className='img-footer' src='/assets/images/logo-header.png' alt="header logo"/>
+          </Link>
         </div>
 
         <footer>
