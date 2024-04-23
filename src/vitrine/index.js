@@ -30,9 +30,19 @@ export default function Vitrine () {
         </div>
 
         <div>
+
+          
           <a href='/'>
-            A B
+            <img className='icons' src='/assets/images/search.png' alt='search' />
           </a>
+
+          
+
+          <a href='/login'>
+            <img className='icons' src='/assets/images/profile.png' alt='profile' />
+          </a>
+        
+          
         </div>
       </section>
       

@@ -29,8 +29,14 @@ export default function Contato() {
         </div>
 
         <div>
+          <a href='/login'>
+            <img src='/assets/images/profile.png' alt='profile' />
+          </a>
+        </div>
+
+        <div>
           <a href='/'>
-            A B
+            <img src='/assets/images/search.png' alt='' />
           </a>
         </div>
       </section>
@@ -58,7 +64,7 @@ export default function Contato() {
 
       <section className='page-footer'>
         <div>
-          <img className='img-header' src='/assets/images/logo-header.png' alt="header logo"/>
+          <img className='img-footer' src='/assets/images/logo-header.png' alt="header logo"/>
         </div>
 
         <footer>
