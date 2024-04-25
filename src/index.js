@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import App from './home';
-import Vitrine from './vitrine';
-import Contato from './contato';
-import Login from './Login';
-import Cadastro from './cadastro';
+import App from './pages/home';
+import Vitrine from './pages/vitrine';
+import Contato from './pages/contato';
+import Login from './pages/Login';
+import Cadastro from './pages/cadastro';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
