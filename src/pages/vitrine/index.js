@@ -1,3 +1,4 @@
+import Box from '../../components/Box';
 import Cabecalho from '../../components/Cabacalho';
 import Footer from '../../components/Footer';
 import './index.scss';
@@ -16,8 +17,10 @@ export default function Vitrine () {
 
       <section className='secao3'>
         <div>
-          
+          <Box />
+
         </div>
+        
       </section>
       
       <Footer />

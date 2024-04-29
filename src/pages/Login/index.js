@@ -10,7 +10,7 @@ export default function Login() {
 
       <section className="page-login">
         
-        <img src='../../assets/images/logo-home.png' alt='logo'/>
+        
 
 
         <div className='container'>
@@ -35,7 +35,9 @@ export default function Login() {
         </div>
       </section>
 
+      
       <Footer />
+      
       </>
     );
   }

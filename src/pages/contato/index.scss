@@ -7,6 +7,10 @@ html {
 // Page
 
 .page-contact {
+  background-image: url(./logo-header.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-size: contain;
   display: flex;
   flex-direction: column;
   text-align: center;
