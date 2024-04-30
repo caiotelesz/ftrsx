@@ -7,9 +7,16 @@ import { Link } from 'react-router-dom'
 export default function Vitrine () {
   return (
     <>
-      <Cabecalho/>    
+
+      <section className='secao'>
+        <div>
+        <Cabecalho/> 
+        </div>
+      </section>
+      
 
       <section className='secao2'>
+         
         <div>
         <img src='/assets/images/frase-recortada.png' alt='frase'/>
         </div>
