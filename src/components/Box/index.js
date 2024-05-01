@@ -1,5 +1,5 @@
 import './index.scss';
-import imagem from './camiseta-teste.png';
+import imagem from './teste2.png';
 
 export default function Box (props) {
 
@@ -9,7 +9,7 @@ export default function Box (props) {
             <img src={props.imagem ?? imagem} alt='camiseta'/>
             <div>
                 <h1 className={`${props.nomeProduto}`}>{props.nome ?? 't-shirt white'}</h1>
-                <span>{props.preco ?? 'R$ 180.00'}</span>
+                <span>{props.preco ?? 'BRL 180.00'}</span>
             </div>
         </div>
     </div>
