@@ -6,6 +6,7 @@ import Vitrine from './pages/vitrine';
 import Contato from './pages/contato';
 import Login from './pages/Login';
 import Cadastro from './pages/cadastro';
+import Visualizacao from './pages/visualização';
 import EsqueciSenha from './pages/esqueceuSenha';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -22,6 +23,7 @@ root.render(
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/esqueceuSenha" element={<EsqueciSenha />} />
+        <Route path="/visualizacao" element={<Visualizacao/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

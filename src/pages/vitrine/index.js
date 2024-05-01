@@ -15,7 +15,7 @@ import image8 from './hoodie-wolf-frente.png';
 import image9 from './tee-e.png';
 import image10 from './teebalck.png';
 import image11 from './short.png';
-import image12 from './newtee.png';
+import image12 from './peças/whitepants-bg.png';
 
 export default function Vitrine () {
   return (
@@ -44,18 +44,54 @@ export default function Vitrine () {
 
       <section className='secao4'>
         <div>
-          <Box imagem= {image1}/>
-          <Box imagem= {image2}/>
-          <Box imagem= {image3}/>
-          <Box imagem= {image4}/>
-          <Box imagem= {image5}/>
-          <Box imagem = {image6}/>
-          <Box imagem = {image7}/>
-          <Box imagem = {image8}/>
-          <Box imagem = {image9}/>
-          <Box imagem = {image10}/>
-          <Box imagem = {image11}/>
-          <Box imagem = {image12}/>
+          <Link to='/visualizacao' className='underline'>
+            <Box imagem= {image1} nome = 'Hoodie  ' preco='320.00'/>
+          </Link>
+          
+          <Link to='/visualizacao' className='underline'>
+            <Box imagem= {image2}/>
+          </Link>
+          
+          <Link to='/visualizacao' className='underline'>
+            <Box imagem= {image3}/>
+          </Link>
+          
+          <Link to='/visualizacao' className='underline'>
+            <Box imagem= {image4}/>
+          </Link>
+          
+          <Link to='/visualizacao' className='underline'>
+            <Box imagem= {image5}/>
+          </Link>
+          
+          <Link to='/visualizacao' className='underline'>
+            <Box imagem= {image6}/>
+          </Link>
+          
+          <Link to='/visualizacao' className='underline'>
+            <Box imagem= {image7}/>
+          </Link>
+          
+          <Link to='/visualizacao' className='underline'>
+            <Box imagem= {image8}/>
+          </Link>
+          
+          <Link to='/visualizacao' className='underline'>
+            <Box imagem= {image9}/>
+          </Link>
+          
+          <Link to='/visualizacao' className='underline'>
+            <Box imagem= {image10}/>
+          </Link>
+          
+          <Link to='/visualizacao' className='underline'>
+            <Box imagem= {image11}/>
+          </Link>
+          
+          <Link to='/visualizacao' className='underline'>
+            <Box imagem= {image12}/>
+          </Link>
+          
         </div>
         
       </section>

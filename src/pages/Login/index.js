@@ -9,10 +9,6 @@ export default function Login() {
       <Cabecalho/>
 
       <section className="page-login">
-        
-        
-
-
         <div className='container'>
         
           <h1>Login</h1>
@@ -35,9 +31,7 @@ export default function Login() {
         </div>
       </section>
 
-      
       <Footer />
-      
       </>
     );
   }
