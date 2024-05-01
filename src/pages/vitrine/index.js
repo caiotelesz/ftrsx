@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export default function Vitrine () {
   return (
-    <>
+    <div>
 
       <section className='secao'>
         <div>
@@ -23,7 +23,16 @@ export default function Vitrine () {
       </section>
 
       <section className='secao3'>
+         
         <div>
+        <img src='/assets/images/logo-header.png' alt='frase'/>
+        </div>
+      </section>
+
+      <section className='secao4'>
+        <div>
+          <Box />
+          <Box />
           <Box />
 
         </div>
@@ -31,6 +40,6 @@ export default function Vitrine () {
       </section>
       
       <Footer />
-      </>
+      </div>
   );
 }
