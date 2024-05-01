@@ -4,6 +4,8 @@ import Footer from '../../components/Footer';
 import './index.scss';
 import { Link } from 'react-router-dom'
 
+import image1 from './teste.png'
+
 export default function Vitrine () {
   return (
     <div>
@@ -31,6 +33,17 @@ export default function Vitrine () {
 
       <section className='secao4'>
         <div>
+          <Box imagem={image1}/>
+          <Box />
+          <Box />
+          <Box />
+          <Box />
+          <Box />
+          <Box />
+          <Box />
+          <Box />
+          <Box />
+          <Box />
           <Box />
           <Box />
           <Box />

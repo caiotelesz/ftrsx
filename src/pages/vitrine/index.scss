@@ -43,9 +43,16 @@
 
 }
 
-.secao4 {
+.secao4 > div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 30px 190px;
+    gap: 50px;
 }
+
+.secao4 {
+    display: flex;
+    justify-content: center;
+}
+
