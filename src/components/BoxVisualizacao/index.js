@@ -2,11 +2,25 @@ import './index.scss';
 
 import imagem from './camiseta-teste.png';
 import imagem2 from './newtee-removebg2.png';
-
 import tamanho from './tamanhos.png';
 
+import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+
 export default function BoxVisualizacao(props) {
+
+  const [contador, setContador] = useState(0);
+
+  function aumentar() {
+    setContador(contador + 1);
+  }
+
+  function diminuir() {
+    setContador(contador - 1);
+  }
+
   return(
+    
 
     <div className='container'>
         <div className='box1'>
@@ -37,13 +51,24 @@ export default function BoxVisualizacao(props) {
           </div>
           
           <div className='botaoValor'>
-            <h2>BRL 80.00</h2>
+            <h2>80.00 BRL</h2>
 
+            <div className="contador">
+              <a onClick={diminuir}> - </a>
+              <span> {contador} </span>
+              <a onClick={aumentar}> + </a>
+              
+            </div>
+            <Link to='https://wa.me/message/5540028922'>
+            
             <button>COMPRAR VIA WHATSAPP</button>
+            </Link>
           </div>
-
-          <img src={tamanho} alt='tamanho-camiseta' />
-        </div>
+        
+          <div className='tam-camiseta'>
+            <img src={tamanho} alt='tamanho-camiseta' />
+          </div>
+      </div>
     </div>
-  )
+  );
 }
