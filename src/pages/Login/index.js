@@ -9,7 +9,7 @@ export default function Login() {
       <Cabecalho/>
 
       <section className="page-login">
-        <div className='container'>
+        <div className='container-login'>
         
           <h1>Login</h1>
 

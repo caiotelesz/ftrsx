@@ -10,7 +10,7 @@ export default function Cadastro() {
         <Cabecalho />
   
         <section className="page-cadastro">
-          <div className='container'>
+          <div className='container-cadastro'>
             <h1>Cadastro Administrador</h1>
 
             <input type="text" placeholder="nome-completo" />
