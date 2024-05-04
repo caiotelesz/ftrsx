@@ -1,0 +1,56 @@
+.senha-login {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('./logo-home.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  div {
+    color: #fff;
+    font-size: 25px;
+    font-style: italic;
+    margin: 10px;
+
+    h1 {
+      font-size: 70px;
+      margin: 15px;
+    }
+
+    p {
+      margin: 10px;
+    }
+
+    input {
+      margin-top: 10px;
+      padding: 5px 10px;
+      border: 2px solid #fff;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    button {
+      width: 100%;
+      max-width: 150px;
+      background-color: #ABABAB;
+      border: 0px;
+      border-radius: 15px;
+      padding: 5px 15px;
+      color: #fff;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: hsl(0, 0%, 67%, 0.8);
+      }
+
+      &:active {
+        background-color: hsl(0, 0%, 67%, 0.3);
+      }
+    }
+  }
+}

@@ -6,25 +6,14 @@ import Footer from '../../components/Footer';
 
 export default function Visualizacao () {
     return (
-        <>
         <div>
+            <Cabecalho />
 
-            <section className='oi'>
-            <div>
-                <Cabecalho />
-            </div>
-            </section>
-
-            <section className='oi2'>
+            <section className='box-visu'>
                 <BoxVisualizacao />
             </section>
 
-            
-        <Footer />        
+            <Footer />        
         </div>
-        
-         </>  
-
-        
     );
 }

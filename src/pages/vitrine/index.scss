@@ -26,14 +26,14 @@
     
     opacity: 0.5;
 
+    div {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        opacity: 0.5;
+    }
 }
 
-.secao2 > div {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    opacity: 0.5;
-}
 
 .secao3 {
     display: flex;

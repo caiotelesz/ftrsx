@@ -7,7 +7,7 @@ html {
 // Page
 
 .page-contact {
-  background-image: url(./logo-header.png);
+  background-image: url('./logo-header.png');
   background-repeat: no-repeat;
   background-position-y: center;
   background-size: contain;
@@ -15,55 +15,57 @@ html {
   flex-direction: column;
   text-align: center;
   margin: 100px;
-}
 
-.page-contact > div h1 {
-  color: #fff;
-  font-size: 70px;
-  font-style: italic;
-  margin: 20px;
-}
+  div {
+    h1 {
+      color: #fff;
+      font-size: 70px;
+      font-style: italic;
+      margin: 20px;
+    }
 
-.page-contact > div p {
-  color: #fff;
-  font-size: 18px;
-}
+    p {
+      color: #fff;
+      font-size: 18px;
+    }
 
-.page-contact input {
-  margin-top: 10px;
-  border: 2px solid #fff;
-  border-radius: 15px;
-  width: 100%;
-  max-width: 500px;
-  padding: 5px 10px;
-}
+    input {
+      margin-top: 10px;
+      border: 2px solid #fff;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 500px;
+      padding: 5px 10px;
+    }
 
-.msg-contact {
-  margin-top: 10px;
-  border-radius: 15px;
-  border: 0px;
-  width: 100%;
-  max-width: 500px;
-  height: 100px;
-  text-align: start;
-  resize: none;
-  padding: 5px 10px;
-}
+    .msg-contact {
+      margin-top: 10px;
+      border-radius: 15px;
+      border: 0px;
+      width: 100%;
+      max-width: 500px;
+      height: 100px;
+      text-align: start;
+      resize: none;
+      padding: 5px 10px;
+    }
 
-.page-contact > div button {
-  background-color: #ABABAB;
-  border: 0px;
-  border-radius: 15px;
-  padding: 5px 15px;
-  color: #fff;
-  margin-top: 20px;
-  transition: color 0.3s ease;
-}
+    button {
+      background-color: #ABABAB;
+      border: 0px;
+      border-radius: 15px;
+      padding: 5px 15px;
+      color: #fff;
+      margin-top: 20px;
+      transition: color 0.3s ease;
 
-.page-contact > div button:hover {
-  background-color: hsl(0, 0%, 67%, 0.8);
+      &:hover {
+        background-color: hsl(0, 0%, 67%, 0.8);
+      }
+
+      &:active {
+        background-color: hsl(0, 0%, 67%, 0.3);
+      }
+    }
+  }
 }
- 
-.page-contact > div button:active {
-  background-color: hsl(0, 0%, 67%, 0.3);
-} 

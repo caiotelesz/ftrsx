@@ -1,7 +1,6 @@
 import Cabecalho from '../../components/Cabacalho';
 import Footer from '../../components/Footer';
 import './index.scss';
-import { Link } from "react-router-dom";
 
 export default function Login() {
     return (
