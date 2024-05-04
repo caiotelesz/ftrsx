@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
-// import logo from "/assets/images/logo-header.png"
 
 export default function Cabecalho () {
 
@@ -15,15 +14,15 @@ export default function Cabecalho () {
 
         <div className='componentes'>
           <a href='/vitrine'>
-            <p>shop all</p>
+            <p>Shop All</p>
           </a>
 
           <a href='/'>
-            <p>home</p>
+            <p>Home</p>
           </a>
 
           <a href='/contato'>
-            <p>contato</p>
+            <p>Contato</p>
           </a>
 
           <a href='https://www.instagram.com/featuresx/'>
