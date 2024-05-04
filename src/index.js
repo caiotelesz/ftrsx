@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Cadastro from './pages/cadastro';
 import Visualizacao from './pages/visualização';
 import EsqueciSenha from './pages/esqueceuSenha';
+import FuncaoAdm from './pages/funcaoAdm';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -22,8 +23,9 @@ root.render(
         <Route path="/contato" element={<Contato />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
-        <Route path="/esqueceuSenha" element={<EsqueciSenha />} />
+        <Route path="/esqueceu_senha" element={<EsqueciSenha />} />
         <Route path="/visualizacao" element={<Visualizacao/>} />
+        <Route path="/funcao_admin" element={<FuncaoAdm />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
