@@ -19,7 +19,7 @@ export default function Login() {
           <button>E n t r a r</button>
 
           <div className='create-login'>
-            <a href='/esqueceuSenha'>
+            <a href='/esqueceu_senha'>
               <p>Esqueci a senha</p>
             </a>
 
