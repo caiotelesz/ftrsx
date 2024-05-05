@@ -12,9 +12,10 @@ export default function funcaoAdm() {
       <section className='section-adm'>
         <h1>Bem-vindo admin</h1>
 
-        <button>adicionar itens</button>
+        <button>adicionar item</button>
+        <button>editar item</button>
         <Link to = '/verificacao' className='underline'>
-          <button>verificar itens</button>
+          <button>verificar item</button>
         </Link>
       </section>
       

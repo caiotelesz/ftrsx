@@ -9,6 +9,8 @@ import Cadastro from './pages/cadastro';
 import Visualizacao from './pages/visualização';
 import EsqueciSenha from './pages/esqueceuSenha';
 import FuncaoAdm from './pages/funcaoAdm';
+import PoliticaPrivacidade from './pages/privacidade';
+import TermosDeUso from './pages/termosUso';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import VerificarItens from './pages/verificarItens';
@@ -28,6 +30,8 @@ root.render(
         <Route path="/visualizacao" element={<Visualizacao/>} />
         <Route path="/funcao_admin" element={<FuncaoAdm />} />
         <Route path="/verificacao" element={<VerificarItens />} />
+        <Route path="/privacidade" element={<PoliticaPrivacidade />} />
+        <Route path="/termos_de_uso" element={<TermosDeUso />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

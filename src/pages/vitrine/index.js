@@ -4,14 +4,6 @@ import Footer from '../../components/Footer';
 import './index.scss';
 import { Link } from 'react-router-dom'
 
-// import image6 from './white-pants.png';
-// import image7 from './black-tee.png';
-// import image8 from './hoodie-wolf-frente.png';
-// import image9 from './tee-e.png';
-// import image10 from './teebalck.png';
-// import image11 from './short.png';
-// import image12 from './peças/whitepants-bg.png';
-
 export default function Vitrine () {
   return (
     <div>

@@ -2,6 +2,8 @@ import Cabecalho from '../../components/Cabacalho';
 import Footer from '../../components/Footer';
 import './index.scss';
 
+import { Link } from 'react-router-dom';
+
 export default function Login() {
     return (
       <>
@@ -16,7 +18,10 @@ export default function Login() {
           <br />
           <input type='password' placeholder='senha' />
           <br/>
-          <button>E n t r a r</button>
+
+          <Link to='/funcao_admin'>
+            <button>E n t r a r</button>
+          </Link>
 
           <div className='create-login'>
             <a href='/esqueceu_senha'>

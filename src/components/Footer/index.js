@@ -17,13 +17,13 @@ export default function footer(){
             <p>CNPJ 00.000.000/0000-00</p>
           </div>
           
-          <a href='/'>
+          <a href='/contato'>
             <p>Informações</p>
           </a>
-          <a href='/'>
+          <a href='/privacidade'>
             <p>Política de Privacidade</p>
           </a>
-          <a href='/'>
+          <a href='/termos_de_uso'>
             <p>Termos de Uso</p>
           </a>
          

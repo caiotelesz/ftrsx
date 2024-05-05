@@ -19,8 +19,11 @@ export default function Cadastro() {
             <br />
             <input type='password' placeholder='senha' />
             <br />
-            <button>C r i a rㅤC o n t a</button>
-  
+
+            <Link to='/login'>
+              <button>C r i a rㅤC o n t a</button>
+            </Link>
+            
           </div>
         </section>
 
