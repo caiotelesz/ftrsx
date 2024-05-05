@@ -11,6 +11,7 @@ import EsqueciSenha from './pages/esqueceuSenha';
 import FuncaoAdm from './pages/funcaoAdm';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import VerificarItens from './pages/verificarItens';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -26,6 +27,7 @@ root.render(
         <Route path="/esqueceu_senha" element={<EsqueciSenha />} />
         <Route path="/visualizacao" element={<Visualizacao/>} />
         <Route path="/funcao_admin" element={<FuncaoAdm />} />
+        <Route path="/verificacao" element={<VerificarItens />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

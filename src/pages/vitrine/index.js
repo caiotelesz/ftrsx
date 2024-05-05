@@ -40,51 +40,51 @@ export default function Vitrine () {
       <section className='secao4'>
         <div>
           <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/teste2.png'} nome = 'Hoodie' preco='320.00'/>
+            <Box imagem= {'/assets/images/pecas/teste2.png'} nome = 'Hoodie trust' preco='320.00'/>
           </Link>
           
           <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/black-tee.png'}/>
+            <Box imagem= {'/assets/images/pecas/black-tee.png'} nome = 'tee basic black' preco = '129.00'/>
           </Link>
           
           <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/black-tee-featworld.png'}/>
+            <Box imagem= {'/assets/images/pecas/black-tee-featworld.png'} nome = 'tee featworld black' preco = '169.90'/>
           </Link>
           
           <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/hoodie-wolf-frente.png'}/>
+            <Box imagem= {'/assets/images/pecas/hoodie-wolf-frente.png'} nome = 'Hoodie basic black' preco = '299.90'/>
           </Link>
           
           <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/hoodie-white.png'}/>
+            <Box imagem= {'/assets/images/pecas/hoodie-white-bg.png'} nome = 'Hoodie featworld white' preco = '319.90'/>
           </Link>
           
           <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/white-pants.png'}/>
+            <Box imagem= {'/assets/images/pecas/white-pants.png'} nome = 'pants featworld' preco = '189.90'/>
           </Link>
           
           <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/hoodie-wolf-frente.png'}/>
+            <Box imagem= {'/assets/images/pecas/white-tee.png'}/>
           </Link>
           
           <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/tee-e.png'}/>
+            <Box imagem= {'/assets/images/pecas/tee-e.png'} nome = 'tee exterm black' preco = '169.90'/>
           </Link>
           
           <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/short.png'}/>
+            <Box imagem= {'/assets/images/pecas/short.png'} nome = 'short feat black' preco = '199.90'/>
           </Link>
           
           <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/newtee.png'}/>
+            <Box imagem= {'/assets/images/pecas/newtee.png'} nome = 'tee feat black' preco = '199.90'/>
           </Link>
           
           <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/drytee.png'}/>
+            <Box imagem= {'/assets/images/pecas/drytee.png'} nome = 'tee featmock white' preco = '229.90'/>
           </Link>
           
           <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/teeblack.png'}/>
+            <Box imagem= {'/assets/images/pecas/teeblack.png'} nome = 'tee f black' preco = '189.90'/>
           </Link>
           
         </div>
