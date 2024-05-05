@@ -1,8 +1,5 @@
 import './index.scss';
 
-import imagem from './camiseta-teste.png';
-import imagem2 from './newtee-removebg2.png';
-import tamanho from './tamanhos.png';
 
 import { Link } from 'react-router-dom';
 import React, { useState } from "react";
@@ -25,9 +22,9 @@ export default function BoxVisualizacao(props) {
     <div className='container'>
         <div className='box1'>
         
-        <img src={imagem2} alt='camiseta' />
+        <img src={'/assets/images/pecas/newtee.png'} alt='camiseta' />
 
-        <img src={imagem} alt='camiseta preta costas' />
+        <img src={'/assets/images/pecas/camiseta-teste.png'} alt='camiseta preta costas' />
 
         </div>
         <div className='box2'>
@@ -66,7 +63,7 @@ export default function BoxVisualizacao(props) {
           </div>
         
           <div className='tam-camiseta'>
-            <img src={tamanho} alt='tamanho-camiseta' />
+            <img src={'/assets/images/tamanhos-camiseta.png'} alt='tamanho-camiseta' />
           </div>
       </div>
     </div>
