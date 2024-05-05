@@ -84,7 +84,7 @@ export default function Vitrine () {
           </Link>
           
           <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/teebalck.png'}/>
+            <Box imagem= {'/assets/images/pecas/teeblack.png'}/>
           </Link>
           
         </div>
