@@ -3,7 +3,7 @@ import './index.scss';
 export default function BoxVerificacao (props) {
 
     return (
-    <div className='card'>
+    <div className='card-ver'>
         <div className='content'>
             <img src={props.imagem ?? 'assets/images/pecas/teeblack.png'} alt='camiseta'/>
             <div>

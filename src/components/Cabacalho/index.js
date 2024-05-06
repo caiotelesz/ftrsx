@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
 
-export default function Cabecalho () {
+export default function Cabecalho (pros) {
 
     return (
     <>
@@ -14,7 +14,7 @@ export default function Cabecalho () {
 
         <div className='componentes'>
           <a href='/vitrine'>
-            <p>Shop All</p>
+            <p> Shop All  </p>
           </a>
 
           <a href='/'>

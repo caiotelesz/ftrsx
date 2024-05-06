@@ -13,7 +13,9 @@ export default function funcaoAdm() {
         <h1>Bem-vindo admin</h1>
 
         <button>adicionar item</button>
+        
         <button>editar item</button>
+
         <Link to = '/verificacao' className='underline'>
           <button>verificar item</button>
         </Link>
