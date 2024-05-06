@@ -13,14 +13,30 @@ export default function VerificarItens() {
     return (
 
         <div>
-            <Cabecalho />
 
-            <section className='secao4'>
-                <BoxVerificacao />
-            </section>
-
-            <Footer />
+      <section className='secao'>
+        <div>
+        <Cabecalho/> 
         </div>
+      </section>
+
+      <section className='secaoVerificacao'>
+        <div>
+          <BoxVerificacao />
+          <BoxVerificacao />
+          <BoxVerificacao />
+          <BoxVerificacao />
+          <BoxVerificacao />
+          <BoxVerificacao />
+          <BoxVerificacao />
+          <BoxVerificacao />
+          
+        </div>
+        
+      </section>
+      
+      <Footer />
+      </div>
     );
 
 }

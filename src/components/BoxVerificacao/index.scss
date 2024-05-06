@@ -1,44 +1,45 @@
 .card-ver {
-    .content{
-        background-color: #D9D9D9;
-        border-radius: 15px;
-        
+  .content {
+    background-color: #d9d9d9;
+    border-radius: 15px;
+
     img {
-        width: 270px;
-        height: 241px;
-        margin: 5px;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
-    }
-    
-    div {
-        background-color: #fff;
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        width: 100%;
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
-    }
-    
-    h1 {
-        font-size: 1.2rem;
-        color: #979797;
-        margin: 10px 0px 0px 5px;
-    }
-    
-    span {
-        font-size: 0.9rem;
-        color: #979797;
-        margin: 0px 0px 5px 5px;
+      width: 270px;
+      height: 241px;
+      margin: 5px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
     }
 
-    a {
+    .card-section {
+      background-color: #fff;
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: space-between;
+      width: 100%;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      color: #979797;
+      padding-bottom: 5px;
+
+      h1 {
+        font-size: 1.2rem;
+        margin: 10px 0px 0px 5px;
+      }
+
+      span {
+        font-size: 0.9rem;
+        margin: 0px 0px 5px 5px;
+      }
+
+      a {
+        margin-top: 10px;
         img {
-            width: 30px;
-            height: 30px;
+          width: 30px;
+          height: 30px;
         }
+      }
     }
-    }
-    
+  }
 }

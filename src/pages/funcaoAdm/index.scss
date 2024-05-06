@@ -15,10 +15,9 @@
     font-style: italic;
     margin: 0;
   }
-
+  
   button {
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 100%;
     max-width: 550px;
@@ -26,11 +25,11 @@
     font-size: 40px;
     font-weight: 600;
     font-style: italic;
-    background-color: hsl(0, 0%, 67%, 0.6);
     border: 0px;
     border-radius: 15px;
     color: #fff;
     margin-top: 20px;
+    background-color: hsl(0, 0%, 67%, 0.6);
     transition: background-color 0.3s ease;
 
       &:hover {
@@ -41,4 +40,10 @@
         background-color: hsl(0, 0%, 67%, 0.2);
       }
   }
+}
+
+.underline2 {
+  text-decoration: none;
+  width: 100%;
+  max-width: 550px;
 }
