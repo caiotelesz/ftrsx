@@ -1,10 +1,15 @@
 .App {
-  text-align: center;
   background-color: #282c34; // cor padrão de fundo
-  //background-color: black;
 
   // imagem
   display: flex;
   justify-content: center;
-  margin-top: 150px;
+  align-items: center;
+  
+  .image-home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
