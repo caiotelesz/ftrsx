@@ -19,15 +19,7 @@ export default function CriarItem() {
             <input type='text' />
           </div>
           <div>
-            <h2>Modelo: </h2>
-            <input type='text' />
-          </div>
-          <div>
             <h2>Preço: </h2>
-            <input type='text' />
-          </div>
-          <div>
-            <h2>Cor: </h2>
             <input type='text' />
           </div>
           <div>

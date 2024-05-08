@@ -35,9 +35,6 @@ export default function BoxVisualizacao(props) {
             <p>
             Confeccionada em Suedine vermelho 100% algodão 220GSM (alta gramatura) na modelagem FEATURESX, nossa t-shirt conta com estampa frontal e traseira em silk. Considere um encolhimento natural de 5%, consultar tabela de medidas.
             </p>
-
-            <h2>Cor: </h2>
-            <button className='botaoCor'> PRETO </button>
             
             <div className='botaoTamanho'>
               <h2>Tamanho: </h2>
