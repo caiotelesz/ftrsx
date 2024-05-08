@@ -1,15 +1,11 @@
 import './index.scss';
 
-import Cabecalho from '../../components/Cabacalho';
-import Footer from '../../components/Footer'
-
-export default function CriarItem() {
+export default function EditarItem() {
 
   return(
-    <div className='page-criar'>
-      <Cabecalho />
+    <div className='page-editar'>
 
-        <div className='container-criar'>
+        <div className='container-editar'>
           <div>
             <h2>Nome: </h2>
             <input type='text' />
@@ -39,11 +35,11 @@ export default function CriarItem() {
             <input type='text' />
           </div>
 
-          <button>Adicionar Imagem</button>
+          <button>Editar Imagem</button>
             
-          <button>Criar Item</button>
+          <button>Editar Item</button>
         </div>
-      <Footer />
+
     </div>
   )
 }
