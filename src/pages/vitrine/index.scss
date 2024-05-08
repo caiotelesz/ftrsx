@@ -20,17 +20,17 @@
 
 .secao2 {
     display: flex;
-    justify-content: center;
-    width: 2096;
-    height: 638px;
+    width: 100%;
     
-    opacity: 0.5;
+    max-width: 96px;
+    height: 438px;
+    margin: 30px 126.5px;
+    
+    opacity: 0.2;
 
-    div {
+    img {
         display: flex;
-        justify-content: center;
-        margin-top: 50px;
-        opacity: 0.5;
+        flex-direction: center;
     }
 }
 

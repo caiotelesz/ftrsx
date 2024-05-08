@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 
 export default function TermosDeUso() {
   return (
-    <>
+    <div className='container-termos'>
     <Cabecalho />
 
     <div className="termos">
@@ -72,6 +72,6 @@ export default function TermosDeUso() {
 
     <Footer />
 
-    </>
+    </div>
   );
 }

@@ -14,7 +14,7 @@ import TermosDeUso from './pages/termosUso';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import VerificarItens from './pages/verificarItens';
-import EditarItem from './pages/EditarItem';
+import CriarItem from './pages/CriarItem';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -30,7 +30,7 @@ root.render(
         <Route path="/esqueceu_senha" element={<EsqueciSenha />} />
         <Route path="/visualizacao" element={<Visualizacao/>} />
         <Route path="/funcao_admin" element={<FuncaoAdm />} />
-        <Route path="/editar_item" element={<EditarItem />} />  
+        <Route path="/criar_item" element={<CriarItem />} />  
         <Route path="/verificacao" element={<VerificarItens />} />
         <Route path="/privacidade" element={<PoliticaPrivacidade />} />
         <Route path="/termos_de_uso" element={<TermosDeUso />} />

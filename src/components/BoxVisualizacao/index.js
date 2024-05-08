@@ -19,7 +19,7 @@ export default function BoxVisualizacao(props) {
   return(
     
 
-    <div className='container'>
+    <div className='card-visu'>
         <div className='box1'>
         
         <img src={'/assets/images/pecas/newtee.png'} alt='camiseta' />

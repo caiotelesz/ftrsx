@@ -17,9 +17,9 @@ export default function Vitrine () {
 
       <section className='secao2'>
          
-        <div>
+        
         <img src='/assets/images/frase-recortada.png' alt='frase'/>
-        </div>
+      
       </section>
 
       <section className='secao3'>

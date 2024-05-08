@@ -1,13 +1,17 @@
 .page-editar {
+  width: 100%;
 
   .container-editar {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 30px 0px 30px 0px;
+    justify-content: center;
     height: 71.5vh;
+
+    background-color: #ededed;
+    margin: 30px 200px;
+    padding: 20px 256.5px;
+    border-radius: 30px;  
     
     div {
       display: flex;

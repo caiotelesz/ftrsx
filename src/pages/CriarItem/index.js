@@ -3,7 +3,7 @@ import './index.scss';
 import Cabecalho from '../../components/Cabacalho';
 import Footer from '../../components/Footer'
 
-export default function EditarItem() {
+export default function CriarItem() {
 
   return(
     <div className='page-editar'>
@@ -40,6 +40,8 @@ export default function EditarItem() {
           </div>
 
           <button>Adicionar Imagem</button>
+            
+          <button>Criar Item</button>
         </div>
       <Footer />
     </div>
