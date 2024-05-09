@@ -15,6 +15,7 @@ import TermosDeUso from './pages/termosUso';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import VerificarItens from './pages/verificarItens';
 import CriarItem from './pages/CriarItem';
+import EditarItem from './components/EditarItem';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -34,6 +35,7 @@ root.render(
         <Route path="/verificacao" element={<VerificarItens />} />
         <Route path="/privacidade" element={<PoliticaPrivacidade />} />
         <Route path="/termos_de_uso" element={<TermosDeUso />} />
+        <Route path="/editar-item" element={<EditarItem />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

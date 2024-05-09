@@ -3,13 +3,19 @@ import './index.scss';
 import Cabecalho from '../../components/Cabacalho';
 import Footer from '../../components/Footer'
 
+/* 
+<input type="file" accept="image, text" name="file" onChange={e=>setImage(e.target.files[0])} />
+<button>atualizar</button> 
+*/
 export default function CriarItem() {
 
   return(
+    
     <div className='page-criar'>
       <Cabecalho />
 
         <div className='container-criar'>
+          <div className='primeriaCaixa'>   
           <div>
             <h2>Nome: </h2>
             <input type='text' />
@@ -30,12 +36,17 @@ export default function CriarItem() {
             <h2>Material: </h2>
             <input type='text' />
           </div>
+          </div>
 
-          <button>
-          <input type="file" accept="image, text" name="file"></input>
-          </button>
-            
-          <button>Criar Item</button>
+
+          <div className='segundaCaixa'>
+            <button>
+            <input type="file" accept="image, text" name="file"></input>
+            </button>
+          </div>  
+        </div>
+        <div>
+          
         </div>
       <Footer />
     </div>

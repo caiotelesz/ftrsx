@@ -4,7 +4,7 @@
   .container-criar {
 
     display: flex;
-    flex-direction: column;
+    flex-direction:row-reverse;
     justify-content: center;
     align-items: center;
     height: 71.5vh;
@@ -14,11 +14,12 @@
     padding: 20px 256.5px;
     border-radius: 30px;  
     
-    div {
+    .primeriaCaixa div {
       display: flex;
       align-items: center;
       width: 100%;
       max-width: 600px;
+      margin: 20px 200px;
 
       h2 {
         margin: 0;
@@ -33,6 +34,7 @@
         max-width: 500px;
         padding: 5px 10px;
       }
+
     }
 
     button {
