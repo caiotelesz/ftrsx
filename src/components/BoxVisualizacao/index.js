@@ -13,7 +13,11 @@ export default function BoxVisualizacao(props) {
   }
 
   function diminuir() {
-    setContador(contador - 1);
+    if (contador > 0) {
+      setContador(contador - 1);
+    } else {
+      alert("Não é possível diminuir mais.");
+    }
   }
 
   return(
