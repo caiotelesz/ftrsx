@@ -40,9 +40,8 @@ export default function CriarItem() {
 
 
           <div className='segundaCaixa'>
-            <button>
-            <input type="file" accept="image, text" name="file"></input>
-            </button>
+          <label className="alterar-imagem" htmlFor="imagemInput">Alterar Imagem</label>
+  <input type="file" accept="image, text" id="imagemInput" name="file" style={{display: 'none'}} />
           </div>  
         </div>
         <div>

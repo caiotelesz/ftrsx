@@ -9,13 +9,13 @@ import Cadastro from './pages/cadastro';
 import Visualizacao from './pages/visualização';
 import EsqueciSenha from './pages/esqueceuSenha';
 import FuncaoAdm from './pages/funcaoAdm';
+import VerificarItens from './pages/verificarItens';
+import CriarItem from './pages/CriarItem';
+import EditarItem from './components/EditarItem';
 import PoliticaPrivacidade from './pages/privacidade';
 import TermosDeUso from './pages/termosUso';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import VerificarItens from './pages/verificarItens';
-import CriarItem from './pages/CriarItem';
-import EditarItem from './components/EditarItem';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
