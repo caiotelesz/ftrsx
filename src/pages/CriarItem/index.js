@@ -31,7 +31,9 @@ export default function CriarItem() {
             <input type='text' />
           </div>
 
-          <button>Adicionar Imagem</button>
+          <button>
+          <input type="file" accept="image, text" name="file"></input>
+          </button>
             
           <button>Criar Item</button>
         </div>

@@ -6,17 +6,16 @@ import React, { useState } from "react";
 
 export default function BoxVisualizacao(props) {
 
-  const [contador, setContador] = useState(0);
+  const [contador, setContador] = useState(1);
 
   function aumentar() {
     setContador(contador + 1);
   }
 
   function diminuir() {
-    if (contador > 0) {
+    if (contador > 1) {
       setContador(contador - 1);
     } else {
-      alert("Não é possível diminuir mais.");
     }
   }
 
