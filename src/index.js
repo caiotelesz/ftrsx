@@ -35,7 +35,7 @@ root.render(
         <Route path="/verificacao" element={<VerificarItens />} />
         <Route path="/privacidade" element={<PoliticaPrivacidade />} />
         <Route path="/termos_de_uso" element={<TermosDeUso />} />
-        <Route path="/editar-item" element={<EditarItem />} />
+        <Route path="/editar_item" element={<EditarItem />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

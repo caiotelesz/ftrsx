@@ -29,6 +29,11 @@ body {
       width: 100%;
       max-width: 500px;
     }
+    
+    input:focus {
+      outline: none;
+    }
+    
 
     button {
       width: 100%;

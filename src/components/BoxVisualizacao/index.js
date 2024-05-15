@@ -15,8 +15,7 @@ export default function BoxVisualizacao(props) {
   function diminuir() {
     if (contador > 1) {
       setContador(contador - 1);
-    } else {
-    }
+    } 
   }
 
   return(
