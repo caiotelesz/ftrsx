@@ -15,7 +15,7 @@ export default function CriarItem() {
       <Cabecalho />
 
         <div className='container-criar'>
-          <div className='primeriaCaixa'>   
+          <div className='primeiraCaixa'>   
           <div>
             <h2>Nome: </h2>
             <input type='text' />
@@ -39,13 +39,14 @@ export default function CriarItem() {
           </div>
 
 
-          <div className='segundaCaixa'>
-          <label className="alterar-imagem" htmlFor="imagemInput">Alterar Imagem</label>
-  <input type="file" accept="image, text" id="imagemInput" name="file" style={{display: 'none'}} />
-          </div>  
-        </div>
-        <div>
-          
+          <div className='segunda-caixa'>
+            <label htmlFor="imagemInput">Alterar Imagem</label>
+            <input type="file" accept="image, text" id="imagemInput" name="file" style={{display: 'none'}} />
+            <button>Atualizar</button>
+          </div>
+          <div className='terceira-caixa'>
+            <button>Adicionar Roupa</button>
+          </div>
         </div>
       <Footer />
     </div>

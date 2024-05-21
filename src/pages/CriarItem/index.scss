@@ -1,25 +1,24 @@
 .page-criar {
-  width: 100%;
 
   .container-criar {
 
     display: flex;
-    flex-direction:row-reverse;
-    justify-content: center;
+    flex-direction: row;
+    gap: 200px;
     align-items: center;
     height: 71.5vh;
 
     background-color: #ededed;
     margin: 30px 200px;
-    padding: 20px 256.5px;
-    border-radius: 30px;  
+    padding: 20px 56.5px;
+    border-radius: 30px;
     
-    .primeriaCaixa div {
+    .primeiraCaixa div {
       display: flex;
       align-items: center;
       width: 100%;
       max-width: 600px;
-      margin: 20px 200px;
+      margin: 20px 50px;
 
       h2 {
         margin: 0;
@@ -37,28 +36,54 @@
 
     }
 
-    .alterar-imagem {
+    .segunda-caixa {
       display: flex;
-      justify-content: center;
-      width: 100%;
-      max-width: 250px;
-      padding: 15px;
-      margin: 10px;
-      font-size: 20px;
-      font-weight: 600;
-      font-style: italic;
-      border: 0px;
-      border-radius: 15px;
-      color: #fff;
-      background-color: hsl(0, 0%, 67%, 0.6);
-      transition: background-color 0.3s ease;
-  
-        &:hover {
-          background-color: hsl(0, 0%, 67%, 0.4);
+      gap: 30px;
+      
+      button, label{
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+        font-weight: 600;
+        font-style: italic;
+        border: 0px;
+        border-radius: 15px;
+        padding: 15px;
+        color: #fff;
+        background-color: hsl(0, 0%, 67%, 0.6);
+        transition: background-color 0.3s ease;
+    
+          &:hover {
+            background-color: hsl(0, 0%, 67%, 0.4);
+          }
+    
+          &:active {
+            background-color: hsl(0, 0%, 67%, 0.2);
+          }
         }
-  
-        &:active {
-          background-color: hsl(0, 0%, 67%, 0.2);
+    }
+
+    .terceira-caixa {
+      button{
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+        font-weight: 600;
+        font-style: italic;
+        border: 0px;
+        border-radius: 15px;
+        padding: 15px;
+        color: #fff;
+        background-color: hsl(0, 0%, 67%, 0.6);
+        transition: background-color 0.3s ease;
+    
+          &:hover {
+            background-color: hsl(0, 0%, 67%, 0.4);
+          }
+    
+          &:active {
+            background-color: hsl(0, 0%, 67%, 0.2);
+          }
         }
     }
   }
