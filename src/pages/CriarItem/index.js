@@ -1,6 +1,7 @@
 import './index.scss';
 
-import { toast } from 'react-toastify';
+import { toast } from 'react-toastify'
+
 import Cabecalho from '../../components/Cabacalho';
 import Footer from '../../components/Footer'
 import { useState } from 'react';
@@ -19,9 +20,10 @@ export default function CriarItem() {
   const [preco, setPreco] = useState('');
   const [tamanho, setTamanho] = useState('');
   const [material, setMaterial] = useState('');
-  const [imgRoupa, setImgRoupa] = useState('imagemRoupa');
+  const [imgRoupa, setImgRoupa] = useState('');
 
   async function adicionarRoupa() {
+
     let corp = {
       "nome": nome,
       "desc": descricao,
@@ -35,10 +37,6 @@ export default function CriarItem() {
       let info = await roupasApi.adicionarRoupa(corp);
       toast.success('Roupa adicionada em: ' + info.id);
     }
-    else {
-      let r = await roupasApi.alterarRoupa(id, corp);
-      toast.success('Roupa alterada!!');
-    }
 
     limparCampos();
   }
@@ -50,8 +48,9 @@ export default function CriarItem() {
     setPreco('');
     setTamanho('');
     setMaterial('');
-    setImgRoupa('imagemRoupa');
+    setImgRoupa('');
   }
+
 
   return(
     
@@ -84,7 +83,7 @@ export default function CriarItem() {
 
           <div className='segunda-caixa'>
             <label htmlFor="imagemInput">Alterar Imagem</label>
-            <input type="file" accept="image, text" id="imagemInput" name="file" style={{display: 'none'}} />
+            <input type="file" id="imagemInput" style={{display: 'none'}} value={imgRoupa} onChange={e => setImgRoupa(e.target.files[0])} />
             <button onClick={adicionarRoupa}>
               Adicionar roupa
             </button>

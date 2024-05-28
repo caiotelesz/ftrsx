@@ -2,9 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 
 import './index.scss';
-
-import Cabecalho from '../../components/Cabacalho';
-import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
 
 
 export default function Cadastro() {
@@ -33,26 +31,20 @@ export default function Cadastro() {
   }
 
     return (
-        <>
-        <Cabecalho />
-  
-        <section className="page-cadastro">
-          <div className='container-cadastro'>
-            <h1>Cadastro Administrador</h1>
+        <div class="content-signup">
+      <div class="fundoinicial"></div>
+      <div class="signup-page">
+        <div class="signup-form">
+            <h1>Criar Conta</h1>
 
             <input type="text" value={nome} onChange={e => setNome(e.target.value)} placeholder="nome-completo" />
-            <br />
             <input type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder="e-mail" />
-            <br />
             <input type='password' value={senha} onChange={ e => setSenha(e.target.value)} placeholder ='senha' />
-            <br />
 
             <button onClick={criarContaAdm}>C r i a rㅤC o n t a</button>
-            
-          </div>
-        </section>
+        </div>
+        </div>
+      </div>
 
-        <Footer />
-        </>
     );
 }

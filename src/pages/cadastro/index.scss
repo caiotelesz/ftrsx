@@ -1,40 +1,113 @@
-.page-cadastro {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
+// .page-cadastro {
+//   display: flex;
+//   flex-direction: column;
+//   text-align: center;
+//   justify-content: center;
+//   height: 100vh;
+//   background-repeat: no-repeat;
+//   background-size: cover;
 
-  div {
-    color: #fff;
+//   div {
+//     color: #fff;
     
+//     h1 {
+//       font-size: 70px;
+//       font-style: italic;
+//     }
+
+//     input {
+//       margin-top: 10px;
+//       padding: 5px 10px;
+//       border: 2px solid #fff;
+//       border-radius: 15px;
+//       width: 100%;
+//       max-width: 500px;
+//     }
+
+//     button {
+//       width: 100%;
+//       max-width: 150px;
+//       background-color: #ABABAB;
+//       border: 0px;
+//       border-radius: 15px;
+//       color: #fff;
+//       padding: 5px 15px;
+//       margin-top: 20px;
+//       transition: color 0.3s ease;
+
+//       &:hover {
+//         background-color: hsl(0, 0%, 67%, 0.8);
+//       }
+
+//       &:active {
+//         background-color: hsl(0, 0%, 67%, 0.3);
+//       }
+//     }
+//   }
+// }
+
+.content-signup {
+  display: flex;
+  flex-direction: row-reverse;
+  
+  > div {
+    width: 50%;
+  }
+
+  .fundoinicial {
+    background-image: url(../../../public/assets/images/inicial.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30%;
+  }
+  
+  .signup-page {
+    background-color: #282C34;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .signup-form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
     h1 {
-      font-size: 70px;
-      font-style: italic;
+      color: #fff;
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
     }
-
-    input {
-      margin-top: 10px;
-      padding: 5px 10px;
+  
+    input{
+      margin-top: 0.5rem;
+      padding: 0.75rem;
       border: 2px solid #fff;
-      border-radius: 15px;
+      border-radius: 20px;
       width: 100%;
-      max-width: 500px;
+  
+      &:focus {
+        outline: none;
+      }
     }
-
+  
     button {
       width: 100%;
-      max-width: 150px;
+      max-width: 200px;
       background-color: #ABABAB;
-      border: 0px;
+      border: none;
       border-radius: 15px;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
       color: #fff;
-      padding: 5px 15px;
-      margin-top: 20px;
+      margin-top: 1rem;
       transition: color 0.3s ease;
-
+  
       &:hover {
         background-color: hsl(0, 0%, 67%, 0.8);
       }
