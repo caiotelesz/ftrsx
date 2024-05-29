@@ -80,6 +80,7 @@
     h1 {
       color: #fff;
       font-size: 3.5rem;
+      font-family: "Noto Sans", sans-serif;
       font-weight: 800;
       margin-bottom: 1.5rem;
     }
@@ -90,6 +91,7 @@
       border: 2px solid #fff;
       border-radius: 20px;
       width: 100%;
+      font-family: "Noto Sans", sans-serif;
   
       &:focus {
         outline: none;
@@ -107,7 +109,9 @@
       color: #fff;
       margin-top: 1rem;
       transition: color 0.3s ease;
-  
+      font-family: "Noto Sans", sans-serif;
+      font-weight: 500;
+      
       &:hover {
         background-color: hsl(0, 0%, 67%, 0.8);
       }

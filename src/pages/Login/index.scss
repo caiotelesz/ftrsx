@@ -1,51 +1,68 @@
-body {
-  background-color: #282c34;
-  padding: 0;
-  margin: 0;
-}
-
-.page-login {
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+.content-login {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
+  flex-direction: row;
+  
+  > div {
+    width: 50%;
+  }
 
-  div {
+  .fundo-inicial {
+    background-image: url(../../../public/assets/images/inicial.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30%;
+  }
+  
+  .login-page {
+    background-color: #282C34;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
     h1 {
       color: #fff;
-      font-size: 70px;
-      font-style: italic;
-      margin: 30px;
+      font-size: 3.5rem;
+      font-family: "Noto Sans", sans-serif;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
     }
-
-    input {
-      margin-top: 10px;
-      padding: 5px 10px;
+  
+    input{
+      margin-top: 0.5rem;
+      padding: 0.75rem;
       border: 2px solid #fff;
-      border-radius: 15px;
+      border-radius: 20px;
       width: 100%;
-      max-width: 500px;
+      font-family: "Noto Sans", sans-serif;
+  
+      &:focus {
+        outline: none;
+      }
     }
-    
-    input:focus {
-      outline: none;
-    }
-    
-
+  
     button {
       width: 100%;
-      max-width: 100px;
+      max-width: 200px;
       background-color: #ABABAB;
-      border: 0px;
+      border: none;
       border-radius: 15px;
-      padding: 5px 15px;
+      padding: 0.75rem 1rem;
       color: #fff;
-      margin-top: 20px;
+      margin-top: 1rem;
       transition: color 0.3s ease;
-
+      font-family: "Noto Sans", sans-serif;
+      font-weight: 500;
+  
       &:hover {
         background-color: hsl(0, 0%, 67%, 0.8);
       }
@@ -66,6 +83,7 @@ body {
     text-decoration: none;
     color: #979797;
     margin-right: 15px;
+    transition: color 0.3s ease;
 
     &:last-child {
       margin-right: 0;
@@ -73,6 +91,11 @@ body {
 
     &:hover {
       color: #000;
+    }
+
+    p {
+      font-family: "Noto Sans", sans-serif;
+      font-weight: 400;
     }
   }
 }
