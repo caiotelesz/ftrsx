@@ -4,6 +4,21 @@
         border-radius: 15px;
         
     }
+    
+    font-family: "Noto Sans", sans-serif;
+    color: #979797;
+    transform: color 0.3s easy;
+
+    &:hover {
+        h1 {
+          color: #000; /* Nova cor para o h1 ao passar o mouse */
+        }
+    
+        span {
+          color: #000; /* Nova cor para o span ao passar o mouse */
+        }
+      }
+
     img {
         width: 270px;
         height: 241px;
@@ -24,15 +39,12 @@
     
     h1 {
         font-size: 1.2rem;
-        font-family: "Noto Sans", sans-serif;
-        color: #979797;
         margin: 10px 0px 0px 5px;
+        
     }
     
     span {
         font-size: 0.9rem;
-        font-family: "Noto Sans", sans-serif;
-        color: #979797;
         margin: 0px 0px 5px 5px;
     }
     
