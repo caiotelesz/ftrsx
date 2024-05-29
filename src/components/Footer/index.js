@@ -19,7 +19,7 @@ export default function footer(){
               <FontAwesomeIcon icon={faInstagram} />
             </Link>
 
-            <Link to='https://www.instagram.com/featuresx/' >
+            <Link to='https://x.com/gonncalves9' >
               <FontAwesomeIcon icon={faXTwitter} />
             </Link>
           </div>
