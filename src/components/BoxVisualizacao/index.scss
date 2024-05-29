@@ -45,13 +45,15 @@
       }
 
       h1 {
+        font-family: "Noto Sans", sans-serif;
         font-size: 45px;
-        font-weight: 500;
+        font-weight: 700;
         margin-bottom: 30px;
         width: 300px;
       }
 
       p {
+        font-family: "Noto Sans", sans-serif;
         font-weight: 500;
         margin-bottom: 20px;
       }
@@ -107,12 +109,14 @@
       align-items: center;
       margin: 25px 0px 25px 0px;
       gap: 40px;
+      font-family: "Noto Sans", sans-serif;
 
       button {
         width: 100%;
         max-width: 220px;
         background-color: #ABABAB;
-        border: 0px;
+        border: none;
+        border-radius: 5px;
         padding: 5px;
         color: #fff;
         transition: color 0.3s ease;
@@ -128,13 +132,16 @@
     } 
 
     .contador {
-      background-color: #fff;
+      background-color: #ABABAB;
+      color: white;
+      font-family: "Noto Sans", sans-serif;
       display: flex;
-      flex-direction: row;
       align-items: center;
-      gap: 40px; 
+      border: none;
+      border-radius: 5px;
+      gap: 25px; 
       height: 20px;
-      padding: 5px;
+      padding: 5px 10px;
     }
 
     .tam-camiseta {

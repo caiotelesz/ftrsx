@@ -41,8 +41,17 @@
   .icons-header {
     display: flex;
 
-    div {
-      padding: 15px 10px ;
+    a {
+      color: #979797;
+      transition: color 0.3s easy;
+
+      &:hover {
+        color: #000;
+      }
+
+      .custom-userIcon {
+        font-size: 20px;
+      }
     }
   }
   

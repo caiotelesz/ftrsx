@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
-import './index.scss';
+import './index.scss';  
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
 
 export default function Cabecalho (pros) {
 
@@ -33,13 +35,7 @@ export default function Cabecalho (pros) {
         <div className='icons-header'>
           <div>
             <a href='/login'>
-              <img src='/assets/images/profile.png' alt='profile' />
-            </a>
-          </div>
-
-          <div>
-            <a href='/'>
-              <img src='/assets/images/search.png' alt='' />
+            <FontAwesomeIcon icon={faUser} className="custom-userIcon"/>
             </a>
           </div>
         </div>

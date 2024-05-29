@@ -5,6 +5,27 @@
   padding: 60px 100px;
   gap: 150px;
 
+  > div {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      gap: 5px;
+
+      a {
+        color: #979797;
+        transition: color 0.3s easy;
+
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+
 
   footer {
     display: flex;
@@ -16,6 +37,7 @@
       margin-right: 380px;
 
       p{
+        font-family: "Noto Sans", sans-serif;
         margin: 0;
         color: #979797;
         font-weight: bold;
@@ -23,6 +45,7 @@
     }
 
     a {
+      font-family: "Noto Sans", sans-serif;
       text-decoration: none;
       color: #979797;
       transition: color 0.3s easy;

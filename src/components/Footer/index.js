@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWhatsapp, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 
 export default function footer(){
   return(
@@ -8,6 +10,19 @@ export default function footer(){
           <Link to="/">
             <img className='img-footer' src='/assets/images/logo-header.png' alt="header logo"/>
           </Link>
+          <div>
+          <Link to='https://wa.me/message/5540028922'>
+            <FontAwesomeIcon icon={faWhatsapp} />
+          </Link>
+
+            <Link to='https://www.instagram.com/featuresx/' >
+              <FontAwesomeIcon icon={faInstagram} />
+            </Link>
+
+            <Link to='https://www.instagram.com/featuresx/' >
+              <FontAwesomeIcon icon={faXTwitter} />
+            </Link>
+          </div>
         </div>
 
         <footer>
