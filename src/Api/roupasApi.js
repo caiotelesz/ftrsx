@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast } from 'react-toastify';
 
 import { API_ADDRESS } from "./constant";
 
@@ -28,3 +29,22 @@ export async function alterarImagem(id, img) {
 
   return r.data;
 }
+
+
+//// export async function removerProduto(id) {
+////   confirmAlert({
+////     title: 'Remover Produto',
+////     message: 'Tem certeza que vai remover o produto?',
+////     buttons: [
+////       {
+////         label: 'Sim',
+////         onClick: async () => {
+////           let r = await roupasApi.removerProduto(produto.id);
+////           toast.dark('✅ Aluno removido com sucesso.');
+////         }
+////       },
+////       { label: 'Não'}
+////     ]
+////   })
+
+
