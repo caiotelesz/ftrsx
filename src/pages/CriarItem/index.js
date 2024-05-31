@@ -76,23 +76,17 @@ export default function CriarItem() {
           <div>
             <h2>Nome: </h2>
             <input
+              placeholder="Nome do produto"
               type="text"
               value={nome}
               onChange={(e) => setNome(e.target.value)}
             />
           </div>
           <div>
-            <h2>Descrição: </h2>
-            <input
-              type="text"
-              value={descricao}
-              onChange={(e) => setDescricao(e.target.value)}
-            />
-          </div>
-          <div>
             <h2>Preço: </h2>
             <input
-              type="text"
+              placeholder="Preço do produto"
+              type="number"
               value={preco}
               onChange={(e) => setPreco(e.target.value)}
             />
@@ -123,15 +117,21 @@ export default function CriarItem() {
               <option value="Moletom">Moletom</option>
             </select>
           </div>
+          <div>
+            <h2>Descrição: </h2>
+            <textarea
+              placeholder="Descrição do produto"
+              className='msg-desc'
+              value={descricao}
+              onChange={(e) => setDescricao(e.target.value)}
+            />
+          </div>
         </div>
         
           <div className="segunda-caixa">
             <div>
-              {imgPreview && <img src={imgPreview} alt="pré-visualização"style={{ marginTop: '10px', maxWidth: '200px', maxHeight: '200px' }} />}
-                
-                
-                <label htmlFor="imagemInput">Adicionar Imagem</label>
-                
+              {imgPreview && <img src={imgPreview} alt="pré-visualização" className="img-preview" />}
+                <label htmlFor="imagemInput">Adicionar Imagem</label>              
                 <input
                   type="file"
                   id="imagemInput"
@@ -140,8 +140,9 @@ export default function CriarItem() {
                 />
             </div>
             
-            <button onClick={adicionarRoupa}>Adicionar roupa</button>
-            
+            <div>
+              <button onClick={adicionarRoupa}>Adicionar roupa</button>
+            </div>
           </div>
         
       </div>

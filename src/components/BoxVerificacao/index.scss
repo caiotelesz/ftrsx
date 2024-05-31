@@ -2,6 +2,7 @@
   .content {
     background-color: #d9d9d9;
     border-radius: 15px;
+    font-family: "Noto Sans", sans-serif;
 
     img {
       width: 270px;
@@ -22,6 +23,18 @@
       border-bottom-right-radius: 12px;
       color: #979797;
       padding-bottom: 5px;
+
+      .custom-penIcon {
+        width: 60px;
+        height: 31px;
+        margin: 5px;
+        color: #979797;
+        transition: color 0.3s easy;
+
+        &:hover {
+          color: #000;
+        }
+      }
 
       h1 {
         font-size: 1.2rem;

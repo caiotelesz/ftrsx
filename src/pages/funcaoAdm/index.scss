@@ -1,13 +1,10 @@
 .section-adm {
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('../../../public/assets/images/logo-home.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  font-family: "Noto Sans", sans-serif;
 
   h1 {
     color: #fff;

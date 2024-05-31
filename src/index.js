@@ -28,14 +28,14 @@ root.render(
         <Route path="/contato" element={<Contato />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
-        <Route path="/esqueceu_senha" element={<EsqueciSenha />} />
+         <Route path="/esqueceu_senha" element={<EsqueciSenha />} />  {/*arrumar */}
         <Route path="/visualizacao" element={<Visualizacao/>} />
         <Route path="/funcao_admin" element={<FuncaoAdm />} />
         <Route path="/criar_item" element={<CriarItem />} />  
-        <Route path="/verificacao" element={<VerificarItens />} />
-        <Route path="/privacidade" element={<PoliticaPrivacidade />} />
-        <Route path="/termos_de_uso" element={<TermosDeUso />} />
-        <Route path="/editar_item" element={<EditarItem />} />
+        <Route path="/verificacao" element={<VerificarItens />} /> {/*arrumar */}
+        <Route path="/editar_item" element={<EditarItem />} /> {/*arrumar */}
+        <Route path="/privacidade" element={<PoliticaPrivacidade />} /> {/*arrumar */}
+        <Route path="/termos_de_uso" element={<TermosDeUso />} /> {/*arrumar */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

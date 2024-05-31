@@ -1,5 +1,8 @@
 import './index.scss';
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";  
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPenToSquare } from '@fortawesome/free-regular-svg-icons'
+
 export default function BoxVerificacao (props) {
 
     return (
@@ -11,8 +14,8 @@ export default function BoxVerificacao (props) {
                 <h1 className={`${props.nomeProduto}`}>{props.nome ?? 't-shirt white'}</h1>
                 <span>BRL {props.preco ?? '180.00'}</span>
                 </div>
-                <Link to='/criar_item' className='icon'>
-                    <img src='/assets/images/botaoAlteracao.png' alt='Botão Alteração' />
+                <Link to='/editar_item' className='icon'>
+                    <FontAwesomeIcon icon={faPenToSquare} className="custom-penIcon" />
                 </Link>
             </div>
         </div>
