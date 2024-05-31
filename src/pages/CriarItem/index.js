@@ -18,10 +18,10 @@ export default function CriarItem() {
   async function adicionarRoupa() {
     const formData = new FormData();
     formData.append("nome", nome);
-    formData.append("descricao", descricao);
+    formData.append("desc", descricao);
     formData.append("preco", preco);
-    formData.append("tamanho", tamanho);
-    formData.append("material", material);
+    formData.append("tam", tamanho);
+    formData.append("mat", material);
     if (imgRoupa) {
       formData.append("imagem", imgRoupa);
     }
