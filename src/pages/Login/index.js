@@ -8,13 +8,13 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const navigate = useNavigate();
-  const params = useParams();
+  
 
   async function logarConta() {
     try {
-      let url = "http://localhost:5000/user/login";
-      let r = await axios.post(url, { params: { email, senha } });
-      let userData = r.data;
+      const url = "http://localhost:5000/user/login";
+      const r = await axios.post(url, { email, password: senha });
+      const userData = r.data;
 
       if (userData && userData.loggedIn) {
         navigate("/funcao_admin");
