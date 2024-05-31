@@ -1,10 +1,40 @@
+
 import Box from '../../components/Box';
 import Cabecalho from '../../components/Cabacalho';
 import Footer from '../../components/Footer';
 import './index.scss';
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react';
+import * as roupasApi from '../../Api/roupasApi';
 
 export default function Vitrine () {
+  const [listClothes, setListClothes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchClothes() {
+      try {
+        const info = await roupasApi.buscarRoupa();
+        setListClothes(info);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchClothes();
+  }, []);
+
+  if (loading) {
+    return <div>Carregando...</div>;
+  }
+
+  if (error) {
+    return <div>Erro: {error}</div>;
+  }
+
   return (
     <div>
         <Cabecalho/>
@@ -19,57 +49,11 @@ export default function Vitrine () {
       </section>
 
       <section className='secao4'>
-        <div>
-          <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/teste2.png'} nome = 'Hoodie trust' preco='320.00'/>
-          </Link>
-          
-          <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/black-tee.png'} nome = 'tee basic black' preco = '129.00'/>
-          </Link>
-          
-          <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/black-tee-featworld.png'} nome = 'tee featworld black' preco = '169.90'/>
-          </Link>
-          
-          <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/hoodie-wolf-frente.png'} nome = 'Hoodie basic black' preco = '299.90'/>
-          </Link>
-          
-          <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/hoodie-white-bg.png'} nome = 'Hoodie featworld white' preco = '319.90'/>
-          </Link>
-          
-          <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/white-pants.png'} nome = 'pants featworld' preco = '189.90'/>
-          </Link>
-          
-          <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/white-tee.png'}/>
-          </Link>
-          
-          <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/tee-e.png'} nome = 'tee exterm black' preco = '169.90'/>
-          </Link>
-          
-          <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/short.png'} nome = 'short feat black' preco = '199.90'/>
-          </Link>
-          
-          <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/newtee.png'} nome = 'tee feat black' preco = '199.90'/>
-          </Link>
-          
-          <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/drytee.png'} nome = 'tee featmock white' preco = '229.90'/>
-          </Link>
-          
-          <Link to='/visualizacao' className='underline'>
-            <Box imagem= {'/assets/images/pecas/teeblack.png'} nome = 'tee f black' preco = '189.90'/>
-          </Link>
-          
+      <div>
+          {listClothes.map(item => (
+            <Box key={item.id} item={item} />
+          ))}
         </div>
-        
       </section>
       
         <Footer />

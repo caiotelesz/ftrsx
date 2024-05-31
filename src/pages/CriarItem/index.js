@@ -1,17 +1,10 @@
 import "./index.scss";
-
 import { toast } from "react-toastify";
-
-import Cabecalho from "../../components/Cabacalho";
 import Footer from "../../components/Footer";
 import { useState } from "react";
-
 import * as roupasApi from "../../Api/roupasApi";
+import Cabecalho from "../../components/Cabacalho";
 
-/* 
-<input type="file" accept="image, text" name="file" onChange={e => setImage(e.target.files[0])} />
-<button>atualizar</button> 
-*/
 export default function CriarItem() {
   const [id, setId] = useState("");
   const [nome, setNome] = useState("");
@@ -23,26 +16,24 @@ export default function CriarItem() {
   const [imgPreview, setImgPreview] = useState(null);
 
   async function adicionarRoupa() {
-
     const formData = new FormData();
+    formData.append("nome", nome);
+    formData.append("descricao", descricao);
+    formData.append("preco", preco);
+    formData.append("tamanho", tamanho);
+    formData.append("material", material);
+    if (imgRoupa) {
+      formData.append("imagem", imgRoupa);
+    }
 
     try {
-      let corp = {
-        "nome": nome,
-        "desc": descricao,
-        "preco": preco,
-        "tam": tamanho,
-        "mat": material,
-        "img": formData.append('image', imgRoupa)
-      };
-
+      let info;
       if (id === "") {
-        let info = await roupasApi.adicionarRoupa(corp);
-        alert("Roupa adicionada em: " + info.id);
+        info = await roupasApi.adicionarRoupa(formData);
+        toast.success("Roupa adicionada com sucesso: " + info.id);
       }
 
       limparCampos();
-
     } catch (error) {
       toast.error("Erro ao adicionar roupa: " + error.message);
     }
@@ -61,7 +52,7 @@ export default function CriarItem() {
 
   function handleImageChange(e) {
     const file = e.target.files[0];
-    if(file) {
+    if (file) {
       setImgRoupa(file);
       setImgPreview(URL.createObjectURL(file));
     }
@@ -121,32 +112,32 @@ export default function CriarItem() {
             <h2>Descrição: </h2>
             <textarea
               placeholder="Descrição do produto"
-              className='msg-desc'
+              className="msg-desc"
               value={descricao}
               onChange={(e) => setDescricao(e.target.value)}
             />
           </div>
         </div>
-        
-          <div className="segunda-caixa">
-            <div>
-              {imgPreview && <img src={imgPreview} alt="pré-visualização" className="img-preview" />}
-                <label htmlFor="imagemInput">Adicionar Imagem</label>              
-                <input
-                  type="file"
-                  id="imagemInput"
-                  style={{ display: "none" }}
-                  onChange={handleImageChange}
-                />
-            </div>
-            
-            <div>
-              <button onClick={adicionarRoupa}>Adicionar roupa</button>
-            </div>
-          </div>
-        
-      </div>
 
+        <div className="segunda-caixa">
+          <div>
+            {imgPreview && (
+              <img src={imgPreview} alt="pré-visualização" className="img-preview" />
+            )}
+            <label htmlFor="imagemInput">Adicionar Imagem</label>
+            <input
+              type="file"
+              id="imagemInput"
+              style={{ display: "none" }}
+              onChange={handleImageChange}
+            />
+          </div>
+
+          <div>
+            <button onClick={adicionarRoupa}>Adicionar roupa</button>
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   );

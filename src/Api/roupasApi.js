@@ -30,6 +30,13 @@ export async function alterarImagem(id, img) {
   return r.data;
 }
 
+export async function buscarRoupa() {
+  let url = API_ADDRESS + '/roupa';
+
+  let r = await axios.get(url);
+  return r.data;
+}
+
 
 //// export async function removerProduto(id) {
 ////   confirmAlert({

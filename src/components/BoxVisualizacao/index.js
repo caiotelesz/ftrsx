@@ -26,8 +26,6 @@ export default function BoxVisualizacao(props) {
           
           <img src={'/assets/images/pecas/newtee.png'} alt='camiseta' />
 
-          <img src={'/assets/images/pecas/camiseta-teste.png'} alt='camiseta preta costas' />
-
           </div>
           <div className='box2'>
             <h1 className={`${props.nomeProduto}`}>
@@ -61,9 +59,7 @@ export default function BoxVisualizacao(props) {
               </Link>
             </div>
           
-            <div className='tam-camiseta'>
-              <img src={'/assets/images/tamanhos-camiseta.png'} alt='tamanho-camiseta' />
-            </div>
+          
         </div>
       </div>
     </section>

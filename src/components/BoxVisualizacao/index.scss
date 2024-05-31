@@ -1,8 +1,8 @@
 .section-visu {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 50px 0px;
+  font-family: "Noto Sans", sans-serif;
 
   .card-visu {
     display: flex;
@@ -45,7 +45,6 @@
       }
 
       h1 {
-        font-family: "Noto Sans", sans-serif;
         font-size: 45px;
         font-weight: 700;
         margin-bottom: 30px;
@@ -53,7 +52,6 @@
       }
 
       p {
-        font-family: "Noto Sans", sans-serif;
         font-weight: 500;
         margin-bottom: 20px;
       }
@@ -109,7 +107,6 @@
       align-items: center;
       margin: 25px 0px 25px 0px;
       gap: 40px;
-      font-family: "Noto Sans", sans-serif;
 
       button {
         width: 100%;
@@ -134,7 +131,6 @@
     .contador {
       background-color: #ABABAB;
       color: white;
-      font-family: "Noto Sans", sans-serif;
       display: flex;
       align-items: center;
       border: none;
