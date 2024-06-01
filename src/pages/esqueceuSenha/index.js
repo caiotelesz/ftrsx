@@ -18,7 +18,7 @@ export default function EsqueceuSenha() {
       if (response.status === 200) {
         setTimeout(() => {
           navigate("/login");
-        }, 2000); // Redireciona para a página de login após 2 segundos
+        }, 2000);
       }
     } catch (error) {
       console.error(error);

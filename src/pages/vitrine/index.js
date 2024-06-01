@@ -3,7 +3,6 @@ import Box from '../../components/Box';
 import Cabecalho from '../../components/Cabacalho';
 import Footer from '../../components/Footer';
 import './index.scss';
-import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import * as roupasApi from '../../Api/roupasApi';
 

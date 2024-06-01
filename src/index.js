@@ -28,7 +28,7 @@ root.render(
         <Route path="/contato" element={<Contato />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
-         <Route path="/esqueceu_senha" element={<EsqueciSenha />} />  {/*arrumar */}
+        <Route path="/esqueceu_senha" element={<EsqueciSenha />} />  {/*arrumar */}
         <Route path="/visualizacao" element={<Visualizacao/>} />
         <Route path="/funcao_admin" element={<FuncaoAdm />} />
         <Route path="/criar_item" element={<CriarItem />} />  
