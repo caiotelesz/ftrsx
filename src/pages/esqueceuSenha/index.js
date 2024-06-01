@@ -1,20 +1,54 @@
-import './index.scss';
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./index.scss";
 
-export default function esqueceuSenha() {
+export default function EsqueceuSenha() {
+  const [email, setEmail] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
-  return(
-    <>
+  async function handleChangePassword() {
+    try {
+      const url = "http://localhost:5000/user/password";
+      const response = await axios.put(url, { email, newPassword });
+      setMessage(response.data.message);
 
-      <section className='senha-login'>
+      if (response.status === 200) {
+        setTimeout(() => {
+          navigate("/login");
+        }, 2000); // Redireciona para a página de login após 2 segundos
+      }
+    } catch (error) {
+      console.error(error);
+      setMessage('Erro ao alterar a senha');
+    }
+  }
 
-        <div>
-          <h1>Pedir uma nova senha</h1>
-          <p>Vamos te enviar um e-mail para poder alterar a sua senha.</p>  
-          <input type="text" placeholder="e-mail" />
-          <br/>
-          <button>E n v i a rㅤe m a i l</button> 
+  return (
+    <div className="content-login">
+      <div className="fundo-inicial"></div>
+      <div className="login-page">
+        <div className="login-form">
+          <h1>Nova Senha</h1>
+          <p>Digite seu email e sua nova senha</p>
+          <input
+            type="email"
+            placeholder="e-mail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="senha"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
+          />
+          <button onClick={handleChangePassword}>M u d a r ㅤs e n h a</button>
+          {message && <p>{message}</p>}
         </div>
-      </section>
-    </>
-  )
+      </div>
+    </div>
+  );
 }

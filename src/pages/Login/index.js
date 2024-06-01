@@ -25,6 +25,7 @@ export default function Login() {
       alert("Verifique se o email ou senha está certo");
     }
   }
+  
   return (
     <div class="content-login">
       <div class="fundo-inicial"></div>
