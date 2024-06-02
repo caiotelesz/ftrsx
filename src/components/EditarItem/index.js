@@ -6,12 +6,15 @@ import axios from 'axios';
 import { API_ADDRESS } from '../../Api/constant';
 import { useParams } from 'react-router-dom';
 
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons'
+
 export default function EditarItem() {
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
   const [modelo, setModelo] = useState('');
   const [preco, setPreco] = useState('');
-  const [cor, setCor] = useState('');
   const [material, setMaterial] = useState('');
   const [id, setId] = useState('');
   const [imagem, setImagem] = useState('');
@@ -28,7 +31,6 @@ export default function EditarItem() {
         setDescricao(item.descricao);
         setModelo(item.modelo);
         setPreco(item.preco);
-        setCor(item.cor);
         setMaterial(item.material);
         setImagem(item.imagem);
       } catch (error) {
@@ -51,7 +53,6 @@ export default function EditarItem() {
       descricao,
       modelo,
       preco,
-      cor,
       material
     };
 
@@ -117,45 +118,76 @@ export default function EditarItem() {
     setDescricao('');
     setModelo('');
     setPreco('');
-    setCor('');
     setMaterial('');
     setImagem('');
   }
 
   return (
-    <div className='page-editar'>
+    <div className="page-editar">
       <Cabecalho />
-      <div className='container-editar'>
-        <img src={imgSrc} alt='camiseta' />
-        <div>
-          <h2>Nome: </h2>
-          <input type='text' value={nome} onChange={e => setNome(e.target.value)} />
+
+      <div className="container-editar">
+        <div className="primeiraCaixa">
+          <div>
+            <h2>Nome: </h2>
+            <input
+              placeholder="Nome do produto"
+              type="text"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+            />
+          </div>
+          <div>
+            <h2>Preço: </h2>
+            <input
+              placeholder="Preço do produto"
+              type="number"
+              value={preco}
+              onChange={(e) => setPreco(e.target.value)}
+            />
+          </div>
+          
+          <div>
+            <h2>Material: </h2>
+            <select
+              value={material}
+              onChange={(e) => setMaterial(e.target.value)}
+            >
+              <option value="">Selecione um material</option>
+              <option value="Algodão">Algodão</option>
+              <option value="Denim">Denim</option>
+              <option value="Lã">Lã</option>
+              <option value="Moletom">Moletom</option>
+            </select>
+          </div>
+          <div>
+            <h2>Descrição: </h2>
+            <textarea
+              placeholder="Descrição do produto"
+              className="msg-desc"
+              value={descricao}
+              onChange={(e) => setDescricao(e.target.value)}
+            />
+          </div>
         </div>
-        <div>
-          <h2>Descrição: </h2>
-          <input type='text' value={descricao} onChange={e => setDescricao(e.target.value)} />
+
+        <div className="segunda-caixa">
+          <div>
+            {<img src={imgSrc} alt="camiseta" className="img-preview" />}
+            <label htmlFor="imagemInput">Alterar Imagem</label>
+            <input
+              type="file"
+              id="imagemInput"
+              style={{ display: "none" }}
+              onChange={ alterarImagem }
+            />
+          </div>
+
+          <div className='icons-edit'>
+            <FontAwesomeIcon icon={faPenToSquare} onClick={salvarProduto} className="custom-Icon"/>
+            <FontAwesomeIcon icon={faTrash} onClick={removerProduto} className="custom-Icon"/>
+          </div>
         </div>
-        <div>
-          <h2>Preço: </h2>
-          <input type='text' value={preco} onChange={e => setPreco(e.target.value)} />
-        </div>
-        <div>
-          <h2>Material: </h2>
-          <select
-            value={material}
-            onChange={(e) => setMaterial(e.target.value)}
-          >
-            <option value="">Selecione um material</option>
-            <option value="Algodão">Algodão</option>
-            <option value="Denim">Denim</option>
-            <option value="Lã">Lã</option>
-            <option value="Moletom">Moletom</option>
-          </select>
-        </div>
-        <input type='file' onChange={e => setImagem(e.target.files[0])} />
-        <button className='updImg' onClick={alterarImagem}>Editar Imagem</button>
-        <button onClick={salvarProduto}>Salvar Produto</button>
-        <button onClick={removerProduto}>Remover Produto</button>
       </div>
       <Footer />
     </div>

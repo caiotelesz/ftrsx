@@ -1,7 +1,7 @@
 import './index.scss';
 import { Link } from "react-router-dom";  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { API_ADDRESS } from '../../Api/constant';
 
 export default function BoxVerificacao ({ item }) {
@@ -14,7 +14,6 @@ export default function BoxVerificacao ({ item }) {
                 <div className='card-section'>
                     <div>
                         <h1 className={`${item.nome}`}>{item.nome ?? 'T-shirt White'}</h1>
-                        <p>{item.descricao ?? 'Descrição não disponível'}</p>
                         <span>BRL {item.preco?.toFixed(2) ?? '180.00'}</span>
                     </div>
                     <Link to={`/editar_item/${item.id}`} className='icon'>
