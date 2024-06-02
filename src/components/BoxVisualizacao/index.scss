@@ -77,10 +77,6 @@
       button:active {
         background-color: hsl(0, 0%, 67%, 0.3);
       }
-
-      button:checked{
-        background-color: blue;
-      }
       
     .botaoTamanho {
         display: flex;
@@ -95,6 +91,10 @@
         border: 0px;
         border-radius: 100px;
         color: #fff;
+
+        &.selecionado {
+          background-color: #333;
+        }
       }
 
       button:hover {

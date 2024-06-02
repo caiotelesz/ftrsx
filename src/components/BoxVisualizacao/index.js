@@ -10,6 +10,8 @@ export default function BoxVisualizacao({ item} ) {
 
   const [contador, setContador] = useState(1);
 
+  const [tamanhoSelecionado, setTamanhoSelecionado] = useState(null);
+
   function aumentar() {
     setContador(contador + 1);
   }
@@ -40,10 +42,10 @@ export default function BoxVisualizacao({ item} ) {
             
             <div className='botaoTamanho'>
               <h2>Tamanho: </h2>
-              <button> P </button>
-              <button> M </button>
-              <button> G </button>
-              <button> GG </button>
+              <button className={tamanhoSelecionado === 'P' ? 'selecionado' : ''} onClick={() => setTamanhoSelecionado('P')}> P </button>
+              <button className={tamanhoSelecionado === 'M' ? 'selecionado' : ''} onClick={() => setTamanhoSelecionado('M')}> M </button>
+              <button className={tamanhoSelecionado === 'G' ? 'selecionado' : ''} onClick={() => setTamanhoSelecionado('G')}> G </button>
+              <button className={tamanhoSelecionado === 'GG' ? 'selecionado' : ''} onClick={() => setTamanhoSelecionado('GG')}> GG </button>
             </div>
             
             <div className='botaoValor'>
