@@ -33,7 +33,7 @@ root.render(
         <Route path="/funcao_admin" element={<FuncaoAdm />} />
         <Route path="/criar_item" element={<CriarItem />} />  
         <Route path="/verificacao" element={<VerificarItens />} />
-        <Route path="/editar_item" element={<EditarItem />} /> {/*arrumar */}
+        <Route path="/editar_item/:itemId" element={<EditarItem />} />
         <Route path="/privacidade" element={<PoliticaPrivacidade />} /> {/*arrumar */}
         <Route path="/termos_de_uso" element={<TermosDeUso />} /> {/*arrumar */}
       </Routes>
