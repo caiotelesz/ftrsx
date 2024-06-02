@@ -6,10 +6,8 @@ export default function Box ({ item }) {
     const nav = useNavigate();
     const imgSrc = item.imagem ? `${API_ADDRESS}/${item.imagem.replace(/\\/g, '/')}` : 'assets/images/pecas/teeblack.png';
 
-    
-
     function roupaDetalhe() {
-      nav('/visualizacao/' + item.id);
+      nav('/roupa/' + item.id);
     }
 
     return (

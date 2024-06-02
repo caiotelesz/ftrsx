@@ -10,7 +10,6 @@ export default function CriarItem() {
   const [nome, setNome] = useState("");
   const [descricao, setDescricao] = useState("");
   const [preco, setPreco] = useState("");
-  //const [tamanho, setTamanho] = useState("");
   const [material, setMaterial] = useState("");
   const [imgRoupa, setImgRoupa] = useState("");
   const [imgPreview, setImgPreview] = useState(null);
@@ -20,7 +19,6 @@ export default function CriarItem() {
     formData.append("nome", nome);
     formData.append("desc", descricao);
     formData.append("preco", preco);
-    //formData.append("tam", tamanho);
     formData.append("mat", material);
     if (imgRoupa) {
       formData.append("imagem", imgRoupa);
@@ -44,7 +42,6 @@ export default function CriarItem() {
     setNome("");
     setDescricao("");
     setPreco("");
-    //setTamanho("");
     setMaterial("");
     setImgRoupa(null);
     setImgPreview(null);
@@ -130,17 +127,3 @@ export default function CriarItem() {
     </div>
   );
 }
-
- //         <div>
- //           <h2>Tamanho: </h2>
- //         <select
- //             value={tamanho}
- //             onChange={(e) => setTamanho(e.target.value)}
- //           >
- //             <option value="">Selecione um tamanho</option>
- //             <option value="P">P</option>
- //             <option value="M">M</option>
- //             <option value="G">G</option>
- //             <option value="GG">GG</option>
- //           </select>
- //         </div>

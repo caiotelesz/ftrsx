@@ -8,11 +8,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: #D9D9D9;
-    border-radius: 50px;
-    width: 1600px;
-    height: 1100px;
+    background: linear-gradient(135deg, #fff, #d9d9d9);
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 1600px;
+    height: 700px;
+    padding: 40px;
+    margin: 0 20px;
 
     .box1 > img {
       margin-top: 30px;
@@ -24,8 +27,6 @@
       flex-direction: column;
       
     }
-
-    
 
     .box2{
       display: flex;
@@ -48,7 +49,7 @@
         font-size: 45px;
         font-weight: 700;
         margin-bottom: 30px;
-        width: 300px;
+        width: 400px;
       }
 
       p {
@@ -75,6 +76,10 @@
       
       button:active {
         background-color: hsl(0, 0%, 67%, 0.3);
+      }
+
+      button:checked{
+        background-color: blue;
       }
       
     .botaoTamanho {

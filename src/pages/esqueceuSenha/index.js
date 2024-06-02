@@ -27,10 +27,10 @@ export default function EsqueceuSenha() {
   }
 
   return (
-    <div className="content-login">
+    <div className="content-password">
       <div className="fundo-inicial"></div>
-      <div className="login-page">
-        <div className="login-form">
+      <div className="password-page">
+        <div className="password-form">
           <h1>Nova Senha</h1>
           <p>Digite seu email e sua nova senha</p>
           <input
