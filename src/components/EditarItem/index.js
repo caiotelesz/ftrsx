@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { API_ADDRESS } from '../../Api/constant';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -20,6 +20,7 @@ export default function EditarItem() {
   const [imagem, setImagem] = useState('');
 
   const { itemId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchItem() {
@@ -60,6 +61,7 @@ export default function EditarItem() {
       if (id) {
         await axios.put(url, corpo);
         alert('Produto alterado com sucesso.');
+        navigate('/verificacao');
       } else {
         const response = await axios.post(url, corpo);
         alert('Produto inserido com ID: ' + response.data.id);
@@ -68,8 +70,6 @@ export default function EditarItem() {
       console.error('Erro ao salvar o produto:', error);
       alert('Erro ao salvar o produto.');
     }
-
-    resetForm();
   }
 
   async function alterarImagem() {
@@ -105,23 +105,13 @@ export default function EditarItem() {
     try {
       await axios.delete(url);
       alert('Produto removido com sucesso.');
-      resetForm();
+      navigate('/verificacao');
     } catch (error) {
       console.error('Erro ao remover o produto:', error);
       alert('Erro ao remover o produto.');
     }
   }
-
-  function resetForm() {
-    setId('');
-    setNome('');
-    setDescricao('');
-    setModelo('');
-    setPreco('');
-    setMaterial('');
-    setImagem('');
-  }
-
+  
   return (
     <div className="page-editar">
       <Cabecalho />

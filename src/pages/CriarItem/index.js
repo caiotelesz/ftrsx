@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import { useState } from "react";
 import * as roupasApi from "../../Api/roupasApi";
 import Cabecalho from "../../components/Cabacalho";
+import { useNavigate } from "react-router-dom";
 
 export default function CriarItem() {
   const [id, setId] = useState("");
@@ -16,6 +17,8 @@ export default function CriarItem() {
 
   async function adicionarRoupa() {
     const formData = new FormData();
+    const navigate = new useNavigate();
+
     formData.append("nome", nome);
     formData.append("desc", descricao);
     formData.append("preco", preco);
@@ -31,21 +34,23 @@ export default function CriarItem() {
         toast.success("Roupa adicionada com sucesso: " + info.id);
       }
 
-      limparCampos();
+      
+      navigate('/verificacao');
     } catch (error) {
       toast.error("Erro ao adicionar roupa: " + error.message);
     }
   }
 
-  function limparCampos() {
-    setId("");
-    setNome("");
-    setDescricao("");
-    setPreco("");
-    setMaterial("");
-    setImgRoupa(null);
-    setImgPreview(null);
-  }
+  // Talvez nn será mais util
+  // function limparCampos() {
+  //   setId("");
+  //   setNome("");
+  //   setDescricao("");
+  //   setPreco("");
+  //   setMaterial("");
+  //   setImgRoupa(null);
+  //   setImgPreview(null);
+  // }
 
   function handleImageChange(e) {
     const file = e.target.files[0];
