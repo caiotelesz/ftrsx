@@ -15,9 +15,11 @@ export default function CriarItem() {
   const [imgRoupa, setImgRoupa] = useState("");
   const [imgPreview, setImgPreview] = useState(null);
 
+  
+  const navigate = new useNavigate();
+
   async function adicionarRoupa() {
     const formData = new FormData();
-    const navigate = new useNavigate();
 
     formData.append("nome", nome);
     formData.append("desc", descricao);
@@ -33,7 +35,7 @@ export default function CriarItem() {
         info = await roupasApi.adicionarRoupa(formData);
         toast.success("Roupa adicionada com sucesso: " + info.id);
       }
-
+      alert("Roupa adicionada!");
       
       navigate('/verificacao');
     } catch (error) {

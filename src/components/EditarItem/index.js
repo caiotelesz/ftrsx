@@ -164,10 +164,10 @@ export default function EditarItem() {
         <div className="segunda-caixa">
           <div>
             {<img src={imgSrc} alt="camiseta" className="img-preview" />}
-            <label htmlFor="imagemInput">Alterar Imagem</label>
+            <label htmlFor="imagem">Alterar Imagem</label>
             <input
               type="file"
-              id="imagemInput"
+              id="imagem"
               style={{ display: "none" }}
               onChange={ alterarImagem }
             />
