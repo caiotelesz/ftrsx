@@ -8,6 +8,8 @@
     align-items: center;
     justify-content: center;
     color: white;
+
+   
 }
 
 .icons {
@@ -39,6 +41,7 @@
 }
 
 .secao4 > div {
+
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -47,7 +50,12 @@
     width: 100%;
     max-width: 1540px;
     margin-bottom: 50px;
+
+    
+    
 }
+
+
 
 .secao4 {
     display: flex;
@@ -55,5 +63,9 @@
 }
 
 .underline {
+    text-decoration: none;
+}
+
+.navegacao {
     text-decoration: none;
 }

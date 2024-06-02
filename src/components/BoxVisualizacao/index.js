@@ -1,10 +1,12 @@
 import './index.scss';
 
-
 import { Link } from 'react-router-dom';
 import React, { useState } from "react";
+import { API_ADDRESS } from '../../Api/constant';
 
-export default function BoxVisualizacao(props) {
+export default function BoxVisualizacao({ item} ) {
+
+  const imgSrc = item.imagem ? `${API_ADDRESS}/${item.imagem.replace(/\\/g, '/')}` : 'assets/images/pecas/teeblack.png';
 
   const [contador, setContador] = useState(1);
 
@@ -24,16 +26,16 @@ export default function BoxVisualizacao(props) {
       <div className='card-visu'>
           <div className='box1'>
           
-          <img src={'/assets/images/pecas/newtee.png'} alt='camiseta' />
+          <img src={imgSrc} alt='camiseta' />
 
           </div>
           <div className='box2'>
-            <h1 className={`${props.nomeProduto}`}>
-              {props.nome ?? 'Black shirt Heavy Tee'}
+            <h1 className={`${item.nomeProduto}`}>
+              {item.nome ?? 'Black shirt Heavy Tee'}
             </h1>
 
             <p>
-            Confeccionada em Suedine vermelho 100% algodão 220GSM (alta gramatura) na modelagem FEATURESX, nossa t-shirt conta com estampa frontal e traseira em silk. Considere um encolhimento natural de 5%, consultar tabela de medidas.
+            {item.descricao ?? 'descrição'}
             </p>
             
             <div className='botaoTamanho'>
@@ -45,7 +47,7 @@ export default function BoxVisualizacao(props) {
             </div>
             
             <div className='botaoValor'>
-              <h2>80.00 BRL</h2>
+              <h2>BRL {item.preco?.toFixed(2) ?? '180.00'}</h2>
 
               <div className="contador">
                 <a onClick={diminuir}> - </a>

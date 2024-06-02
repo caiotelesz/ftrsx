@@ -1,12 +1,12 @@
-
 import Box from '../../components/Box';
 import Cabecalho from '../../components/Cabacalho';
 import Footer from '../../components/Footer';
 import './index.scss';
 import { useState, useEffect } from 'react';
 import * as roupasApi from '../../Api/roupasApi';
+import { Link } from 'react-router-dom';
 
-export default function Vitrine () {
+export default function Vitrine() {
   const [listClothes, setListClothes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -36,26 +36,27 @@ export default function Vitrine () {
 
   return (
     <div>
-        <Cabecalho/>
-      
+      <Cabecalho />
 
-      <section className='secao2'>                
-        <img src='/assets/images/frase-recortada.png' alt='frase'/>      
+      <section className='secao2'>
+        <img src='/assets/images/frase-recortada.png' alt='frase' />
       </section>
 
       <section className='secao3'>
-        <img src='/assets/images/logo-header.png' alt='frase'/>
+        <img src='/assets/images/logo-header.png' alt='frase' />
       </section>
 
       <section className='secao4'>
-      <div>
-          {listClothes.map(item => (
-            <Box key={item.id} item={item} />
-          ))}
+        <div>
+        {listClothes.map(item => (
+          <Link className='navegacao' key={item.id} to={`/visualizacao/${item.id}`}>
+            <Box item={item} />
+          </Link>
+        ))}
         </div>
       </section>
-      
-        <Footer />
-      </div>
+
+      <Footer />
+    </div>
   );
 }
