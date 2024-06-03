@@ -41,12 +41,34 @@
     h1 {
         font-size: 1.2rem;
         margin: 10px 0px 0px 5px;
-        
-        
     }
     
     span {
         font-size: 0.9rem;
         margin: 0px 0px 5px 5px;   
+    }
+}
+
+// Responsividade
+
+@media (max-width: 991px) {
+    .card {
+        img {
+            width: 190px;
+            height: 161px;
+        }
+        h1 {font-size: 0.9rem;}
+        span {font-size: 0.7rem;}
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        img {
+            width: 170px;
+            height: 141px;
+        }
+        h1 {font-size: 0.7rem;}
+        span {font-size: 0.5rem;}
     }
 }
