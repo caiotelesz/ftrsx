@@ -1,14 +1,8 @@
-import { useNavigate } from 'react-router-dom';
 import './index.scss';
 import { API_ADDRESS } from '../../Api/constant';
 
 export default function Box ({ item }) {
-    const nav = useNavigate();
     const imgSrc = item.imagem ? `${API_ADDRESS}/${item.imagem.replace(/\\/g, '/')}` : 'assets/images/pecas/teeblack.png';
-
-    function roupaDetalhe() {
-      nav('/roupa/' + item.id);
-    }
 
     return (
     <div className='card'>

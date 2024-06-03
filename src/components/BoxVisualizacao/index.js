@@ -56,9 +56,6 @@ export default function BoxVisualizacao({ item} ) {
               <button>COMPRAR VIA WHATSAPP</button>
             </Link>
             
-            <Link to={`/editar_item/${item.id}`}>
-              <button>EDITAR ITEM</button>
-            </Link>
           </div>
         </div>
       </div>
