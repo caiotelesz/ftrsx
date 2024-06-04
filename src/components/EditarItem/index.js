@@ -114,7 +114,6 @@ export default function EditarItem() {
   
   return (
     <div className="page-editar">
-      <Cabecalho />
 
       <div className="container-editar">
         <div className="primeiraCaixa">
@@ -179,7 +178,6 @@ export default function EditarItem() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
