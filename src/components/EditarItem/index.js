@@ -6,7 +6,6 @@ import axios from 'axios';
 import { API_ADDRESS } from '../../Api/constant';
 import { useParams, useNavigate } from 'react-router-dom';
 
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons'
 
@@ -17,7 +16,8 @@ export default function EditarItem() {
   const [preco, setPreco] = useState('');
   const [material, setMaterial] = useState('');
   const [id, setId] = useState('');
-  const [imagem, setImagem] = useState('');
+  const [imagem, setImagem] = useState(null); 
+  const [imgSrc, setImgSrc] = useState(''); 
 
   const { itemId } = useParams();
   const navigate = useNavigate();
@@ -34,6 +34,7 @@ export default function EditarItem() {
         setPreco(item.preco);
         setMaterial(item.material);
         setImagem(item.imagem);
+        setImgSrc(`${API_ADDRESS}/${item.imagem.replace(/\\/g, '/')}`);
       } catch (error) {
         console.error('Erro ao buscar o item:', error);
         alert('Erro ao buscar o item.');
@@ -44,8 +45,6 @@ export default function EditarItem() {
       fetchItem();
     }
   }, [itemId]);
-
-  const imgSrc = imagem ? `${API_ADDRESS}/${imagem.replace(/\\/g, '/')}` : 'assets/images/pecas/teeblack.png';
 
   async function salvarProduto() {
     const url = `http://localhost:5000/roupa/${id ? id : ''}`;
@@ -72,22 +71,24 @@ export default function EditarItem() {
     }
   }
 
-  async function alterarImagem() {
+  async function alterarImagem(e) { 
     if (!id) {
       alert('Salve o produto antes de alterar a imagem.');
       return;
     }
 
+    const file = e.target.files[0]; 
     const url = `http://localhost:5000/roupa/imagem/${id}`;
 
     const form = new FormData();
-    form.append('imagem', imagem);
+    form.append('imagem', file);
 
     try {
       await axios.put(url, form, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       alert('Imagem alterada com sucesso.');
+      setImgSrc(URL.createObjectURL(file));
     } catch (error) {
       console.error('Erro ao alterar a imagem:', error);
       alert('Erro ao alterar a imagem.');
@@ -169,7 +170,7 @@ export default function EditarItem() {
               type="file"
               id="imagem"
               style={{ display: "none" }}
-              onChange={ alterarImagem }
+              onChange={alterarImagem}
             />
           </div>
 

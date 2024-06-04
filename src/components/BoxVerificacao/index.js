@@ -7,6 +7,7 @@ import { API_ADDRESS } from '../../Api/constant';
 export default function BoxVerificacao ({ item }) {
     const imgSrc = item.imagem ? `${API_ADDRESS}/${item.imagem.replace(/\\/g, '/')}` : 'assets/images/pecas/teeblack.png';
 
+
     return (
         <div className='card-ver'>
             <div className='content'>

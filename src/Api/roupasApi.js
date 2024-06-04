@@ -25,10 +25,11 @@ export async function alterarImagem(id, img) {
 
   let r = await axios.put(url, form, {
     headers: { 'Content-Type': 'multipart/form-data' }
-  })
+  });
 
   return r.data;
 }
+
 
 export async function buscarRoupa() {
   let url = API_ADDRESS + '/roupa';
