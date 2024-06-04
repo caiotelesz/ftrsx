@@ -36,6 +36,7 @@ export default function Vitrine() {
 
   return (
     <div>
+      <Cabecalho />
 
       <section className='secao2'>
         <img src='/assets/images/frase-recortada.png' alt='frase' />

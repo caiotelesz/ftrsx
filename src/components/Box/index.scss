@@ -51,6 +51,12 @@
 
 // Responsividade
 
+@media (max-width: 1330px) {
+    .card {
+        img {width: 230px; height: 190px;}
+    }
+}
+
 @media (max-width: 991px) {
     .card {
         img {
