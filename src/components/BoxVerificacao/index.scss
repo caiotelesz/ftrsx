@@ -64,3 +64,24 @@
 
   }
 }
+
+// Responsividade
+
+@media (max-width: 815px) {
+  .card-ver {
+    img {
+      width: 170px;
+      height: 141px;
+    }
+    .card-section {
+      justify-content: space-around;
+      h1 {
+        font-size: 0.9rem;
+        width: 100px;
+      }
+      span {font-size: 0.7rem;}
+
+      .custom-penIcon {height: 25px;}
+    }
+  }
+}

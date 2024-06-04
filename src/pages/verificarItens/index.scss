@@ -6,3 +6,13 @@
     margin: 30px 280px;
     gap: 70px;
 }
+
+// Responsividade
+
+@media (max-width: 1629px) {
+    .secaoVerificacao > div {
+        justify-content: center;
+        margin: 30px 100px;
+        gap: 50px;
+    }
+}
