@@ -99,3 +99,21 @@
     }
   }
 }
+
+// Responsividade
+
+@media (max-width: 957px) {
+  .content-login {
+    .login-form {
+      h1 {
+        font-size: 2.5rem;
+        margin: 15px;
+      }
+      input {
+        padding: 0.45rem;
+        width: 70%;
+    }
+      button {padding: 0.45rem 0.75rem;}
+    }
+  }
+}
