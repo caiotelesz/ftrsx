@@ -67,8 +67,18 @@
 
 // Responsividade
 
+@media (max-width: 1281px) {
+    .secao2 { 
+        height: 370px;
+        img {max-height: 90%;}
+    }
+}
+ 
 @media (max-width: 991px) {
-  .secao2 { height: 200px; }
+    .secao2 { 
+        height: 300px;
+        img {max-height: 80%;}
+    }
   .secao3 { height: 60px; }
   .secao4 { 
     > div {
