@@ -11,7 +11,7 @@ export default function EsqueceuSenha() {
 
   async function handleChangePassword() {
     try {
-      const url = "http://localhost:5000/user/password";
+      const url = "http://191.235.120.237:5000/user/password";
       const response = await axios.put(url, { email, newPassword });
       setMessage(response.data.message);
 

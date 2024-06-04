@@ -25,7 +25,7 @@ export default function EditarItem() {
   useEffect(() => {
     async function fetchItem() {
       try {
-        const response = await axios.get(`http://localhost:5000/roupa/${itemId}`);
+        const response = await axios.get(`http://191.235.120.237:5000/roupa/${itemId}`);
         const item = response.data;
         setId(item.id);
         setNome(item.nome);

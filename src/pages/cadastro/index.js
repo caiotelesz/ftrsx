@@ -11,7 +11,7 @@ export default function Cadastro() {
   const navigate = useNavigate();
 
   async function criarContaAdm() {
-    let url = 'http://localhost:5000/user/register';
+    let url = 'http://191.235.120.237:5000/user/register';
     let corp = {
       name: nome,
       email: email,
