@@ -1,10 +1,13 @@
-import './index.scss';
-import Cabecalho from '../../components/Cabacalho';
-import Footer from '../../components/Footer';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { API_ADDRESS } from '../../Api/constant';
 import { useParams, useNavigate } from 'react-router-dom';
+import * as roupasApi from "../../Api/roupasApi";
+
+import Cabecalho from '../../components/Cabacalho';
+import Footer from '../../components/Footer';
+
+import './index.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons'
@@ -25,7 +28,7 @@ export default function EditarItem() {
   useEffect(() => {
     async function fetchItem() {
       try {
-        const response = await axios.get(`http://191.235.120.237:5000/roupa/${itemId}`);
+        const response = await axios.get(API_ADDRESS + `/roupa/${itemId}`);
         const item = response.data;
         setId(item.id);
         setNome(item.nome);
@@ -46,29 +49,10 @@ export default function EditarItem() {
     }
   }, [itemId]);
 
-  async function salvarProduto() {
-    const url = `http://localhost:5000/roupa/${id ? id : ''}`;
-    const corpo = {
-      nome,
-      descricao,
-      modelo,
-      preco,
-      material
-    };
+  async function productExist() {
+    let info = await roupasApi.salvarProduto(id, nome, descricao, modelo, preco, material, navigate);
 
-    try {
-      if (id) {
-        await axios.put(url, corpo);
-        alert('Produto alterado com sucesso.');
-        navigate('/verificacao');
-      } else {
-        const response = await axios.post(url, corpo);
-        alert('Produto inserido com ID: ' + response.data.id);
-      }
-    } catch (error) {
-      console.error('Erro ao salvar o produto:', error);
-      alert('Erro ao salvar o produto.');
-    }
+    return info;
   }
 
   async function alterarImagem(e) { 
@@ -78,7 +62,7 @@ export default function EditarItem() {
     }
 
     const file = e.target.files[0]; 
-    const url = `http://localhost:5000/roupa/imagem/${id}`;
+    const url = API_ADDRESS + `/roupa/imagem/${id}`;
 
     const form = new FormData();
     form.append('imagem', file);
@@ -95,22 +79,10 @@ export default function EditarItem() {
     }
   }
 
-  async function removerProduto() {
-    if (!id) {
-      alert('Selecione um produto para remover.');
-      return;
-    }
+  async function removeProduct() {
+    let info = await roupasApi.removerProduto(id, navigate);
 
-    const url = `http://localhost:5000/roupa/${id}`;
-
-    try {
-      await axios.delete(url);
-      alert('Produto removido com sucesso.');
-      navigate('/verificacao');
-    } catch (error) {
-      console.error('Erro ao remover o produto:', error);
-      alert('Erro ao remover o produto.');
-    }
+    return info;
   }
   
   return (
@@ -175,8 +147,8 @@ export default function EditarItem() {
           </div>
 
           <div className='icons-edit'>
-            <FontAwesomeIcon icon={faPenToSquare} onClick={salvarProduto} className="custom-Icon"/>
-            <FontAwesomeIcon icon={faTrash} onClick={removerProduto} className="custom-Icon"/>
+            <FontAwesomeIcon icon={faPenToSquare} onClick={productExist} className="custom-Icon"/>
+            <FontAwesomeIcon icon={faTrash} onClick={removeProduct} className="custom-Icon"/>
           </div>
         </div>
       </div>

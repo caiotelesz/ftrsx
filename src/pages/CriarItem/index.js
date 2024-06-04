@@ -15,7 +15,6 @@ export default function CriarItem() {
   const [imgRoupa, setImgRoupa] = useState("");
   const [imgPreview, setImgPreview] = useState(null);
 
-  
   const navigate = new useNavigate();
 
   async function adicionarRoupa() {
@@ -43,17 +42,6 @@ export default function CriarItem() {
     }
   }
 
-  // Talvez nn será mais util
-  // function limparCampos() {
-  //   setId("");
-  //   setNome("");
-  //   setDescricao("");
-  //   setPreco("");
-  //   setMaterial("");
-  //   setImgRoupa(null);
-  //   setImgPreview(null);
-  // }
-
   function handleImageChange(e) {
     const file = e.target.files[0];
     if (file) {
@@ -61,7 +49,7 @@ export default function CriarItem() {
       setImgPreview(URL.createObjectURL(file));
     }
   }
-
+  
   return (
     <div className="page-criar">
       <Cabecalho />

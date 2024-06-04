@@ -1,8 +1,8 @@
 import axios from "axios";
-import { toast } from 'react-toastify';
 
 import { API_ADDRESS } from "./constant";
 
+// Adicionar Roupa
 export async function adicionarRoupa(corp) {
   let url = API_ADDRESS + '/roupa';
 
@@ -10,49 +10,55 @@ export async function adicionarRoupa(corp) {
   return r.data;
 }
 
-export async function alterarRoupa(id, corp) {
-  let url = API_ADDRESS + '/roupa/' + id;
+// Salvar uma roupa existente
+export async function salvarProduto(id, nome, descricao, modelo, preco, material, navigate) {
+  const url = API_ADDRESS + `/roupa/${id ? id : ''}`;
+  const corpo = {
+    nome,
+    descricao,
+    modelo,
+    preco,
+    material
+  };
 
-  let r = await axios.put(url, corp);
-  return r.data;
+  try {
+    if (id) {
+      await axios.put(url, corpo);
+      alert('Produto alterado com sucesso.');
+      navigate('/verificacao');
+    } else {
+      const response = await axios.post(url, corpo);
+      alert('Produto inserido com ID: ' + response.data.id);
+    }
+  } catch (error) {
+    console.error('Erro ao salvar o produto:', error);
+    alert('Erro ao salvar o produto.');
+  }
 }
 
-export async function alterarImagem(id, img) {
-  let url = API_ADDRESS + '/roupa/imagem/' + id;
+// Remover produto
+export async function removerProduto(id, navigate) {
+  if (!id) {
+    alert('Selecione um produto para remover.');
+    return;
+  }
 
-  let form = new FormData();
-  form.append('imagem', img);
+  const url = API_ADDRESS + `/roupa/${id}`;
 
-  let r = await axios.put(url, form, {
-    headers: { 'Content-Type': 'multipart/form-data' }
-  });
-
-  return r.data;
+  try {
+    await axios.delete(url);
+    alert('Produto removido com sucesso.');
+    navigate('/verificacao');
+  } catch (error) {
+    console.error('Erro ao remover o produto:', error);
+    alert('Erro ao remover o produto.');
+  }
 }
 
-
+// Buscar uma roupa
 export async function buscarRoupa() {
   let url = API_ADDRESS + '/roupa';
 
   let r = await axios.get(url);
   return r.data;
 }
-
-
-//// export async function removerProduto(id) {
-////   confirmAlert({
-////     title: 'Remover Produto',
-////     message: 'Tem certeza que vai remover o produto?',
-////     buttons: [
-////       {
-////         label: 'Sim',
-////         onClick: async () => {
-////           let r = await roupasApi.removerProduto(produto.id);
-////           toast.dark('✅ Aluno removido com sucesso.');
-////         }
-////       },
-////       { label: 'Não'}
-////     ]
-////   })
-
-
