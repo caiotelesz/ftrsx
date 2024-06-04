@@ -1,6 +1,8 @@
-import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import * as userApi from "../../Api/userApi";
+
 import "./index.scss";
 
 export default function EsqueceuSenha() {
@@ -9,23 +11,11 @@ export default function EsqueceuSenha() {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  async function handleChangePassword() {
-    try {
-      const url = "http://191.235.120.237:5000/user/password";
-      const response = await axios.put(url, { email, newPassword });
-      setMessage(response.data.message);
-
-      if (response.status === 200) {
-        setTimeout(() => {
-          navigate("/login");
-        }, 2000);
-      }
-    } catch (error) {
-      console.error(error);
-      setMessage('Erro ao alterar a senha');
-    }
+  async function ChangePassword() {
+      let info = await userApi.alterarSenha(email, newPassword, navigate);
+      setMessage(message);
   }
-
+  
   return (
     <div className="content-password">
       <div className="fundo-inicial"></div>
@@ -45,7 +35,7 @@ export default function EsqueceuSenha() {
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
           />
-          <button onClick={handleChangePassword}>M u d a r ㅤs e n h a</button>
+          <button onClick={ChangePassword}>M u d a r ㅤs e n h a</button>
           {message && <p>{message}</p>}
         </div>
       </div>
