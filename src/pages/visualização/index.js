@@ -44,7 +44,7 @@ export default function Visualizacao() {
 
   
   const getRelatedItems = (currentItem) => {
-    return listClothes.filter(item => item.id !== currentItem.id).slice(0, 3); 
+    return listClothes.filter(item => item.id !== currentItem.id).slice(0, 5); 
   };
 
   return (

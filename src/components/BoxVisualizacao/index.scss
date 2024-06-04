@@ -1,18 +1,18 @@
 .section-visu {
   display: flex;
   justify-content: center;
-  margin: 50px 0px;
   font-family: "Noto Sans", sans-serif;
+  flex-direction: column;
+  width: 85%;
 
   .card-visu {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 220px;
+    gap: 190px;
     background: linear-gradient(135deg, #fff, #d9d9d9);
     border-radius: 20px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
-    width: 100%;
     max-width: 1600px;
     height: 700px;
     padding: 40px;
@@ -121,92 +121,76 @@
   }
 
   .related-items {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 25px;
 
     h3 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
+      color: #fff;
+      font-size: 26px;
+      margin: 50px 0px 15px 0px;
     }
-
     .related-items-list {
       display: flex;
-      overflow-x: auto; /* Adiciona scroll horizontal */
-      gap: 20px;
-      padding-bottom: 20px; /* Adiciona espaço abaixo da lista */
+      flex-direction: row;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
 
-      .related-item-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 220px;
-        padding: 10px;
-        background-color: #f9f9f9;
-        border-radius: 10px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-
-        img {
-          width: 100%;
-          height: auto;
-          border-radius: 5px;
-          margin-bottom: 10px;
-        }
-
-        span {
-          font-size: 16px;
-          color: #333;
-          margin-bottom: 5px;
-        }
-
-        .price {
-          font-size: 18px;
-          font-weight: bold;
-          color: #007bff;
-          margin-bottom: 10px;
-        }
-
-        button {
-          background-color: #007bff;
-          color: #fff;
-          border: none;
-          border-radius: 5px;
-          padding: 8px 16px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-
-          &:hover {
-            background-color: #0056b3;
-          }
-        }
-      }
+    a {
+      text-decoration: none;
+      color: #979797;
     }
   }
 }
+
 
 // Responsividade
 
 @media (max-width: 1156px) {
   .section-visu {
     .card-visu {
-      gap: 100px;
+      gap: 80px;
+      height: 600px;
 
       .box1 > img {
-        max-width: 360px;
-        max-height: 360px;
+        max-width: 305px;
+        max-height: 305px;
       }
 
       .box2 {
         h1 {
-          font-size: 28px;
+          font-size: 26px;
         }
 
         p {
-          font-size: 16px;
+          font-size: 14px;
         }
 
         .botaoValor {
-          gap: 30px;
+          gap: 15px;
+
+          h2 {
+            font-size: 18px;
+          }
         }
+
+        .contador {
+          gap: 15px;
+          height: 15px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .related-items {
+      h3 {
+        font-size: 21px;
+      }
+
+      .related-items-list {
+        flex-wrap: wrap;
       }
     }
   }
@@ -216,19 +200,20 @@
   .section-visu {
     .card-visu {
       gap: 50px;
+      height: 500px;
 
       .box1 > img {
-        max-width: 300px;
-        max-height: 300px;
+        max-width: 200px;
+        max-height: 200px;
       }
 
       .box2 {
         h1 {
-          font-size: 23px;
+          font-size: 21px;
         }
 
         p {
-          font-size: 14px;
+          font-size: 12px;
         }
 
         .botaoTamanho {
@@ -252,10 +237,12 @@
     .card-visu {
       flex-direction: column;
       gap: 20px;
+      width: auto;
+      margin: 0;
 
       .box1 > img {
-        max-width: 260px;
-        max-height: 260px;
+        max-width: 220px;
+        max-height: 220px;
       }
 
       .box2 {
