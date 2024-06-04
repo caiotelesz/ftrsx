@@ -86,3 +86,18 @@ html {
     }
   }
 }
+
+@media (max-width: 768px) {
+  .page-contact {
+    div {
+      h1 {font-size: 45px;}
+      p {font-size: 15px;}
+      input {width: 350px; height: 15px;}
+      .msg-contact {width: 350px; height: 85px;}
+      button {
+        padding: 0.45rem 0.75rem;
+      }
+    }
+  }
+  
+}

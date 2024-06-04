@@ -9,7 +9,6 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 export default function Contato() {
   return (
     <>
-      <Cabecalho />
 
       <section className='page-contact'>
         <div>
@@ -39,7 +38,6 @@ export default function Contato() {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 }
