@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   background-color: #D9D9D9;
-  padding: 60px 100px;
+  padding: 50px 100px;
   gap: 150px;
 
   > div {
@@ -52,6 +52,81 @@
 
       &:hover{
         color: #000;
+      }
+    }
+  }
+}
+
+// Responsivo
+
+@media (max-width: 1381px) {
+  .page-footer {
+    gap: 100px;
+    padding: 50px 70px;
+
+    footer {
+      margin-left: 20px;
+
+      div {
+        margin-right: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1003px) {
+  .page-footer {
+    gap: 50px;
+    padding: 50px 70px;
+
+    footer {
+      margin-left: 0px;
+      gap: 20px;
+
+      div {
+        margin-right: 50px;
+
+        p {
+          font-size: 14px;
+        }
+      }
+
+      a {
+        > p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 725px) {
+  .page-footer {
+    gap: 20px;
+    padding: 25px 50px;
+    width: 100%;
+
+    .img-footer {
+      margin: 0;
+      width: 80px;
+      height: 12px;
+    }
+    footer {
+      margin-left: 0px;
+      gap: 10px;
+
+      div {
+        margin-right: 50px;
+
+        p {
+          font-size: 10px;
+        }
+      }
+
+      a {
+        > p {
+          font-size: 11px;
+        }
       }
     }
   }
