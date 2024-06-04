@@ -88,6 +88,10 @@
 }
 
 @media (max-width: 768px) {
+    .secao2 {
+        height: 200px;
+    }
+    
     .secao4 { 
         > div {
             gap: 40px;
