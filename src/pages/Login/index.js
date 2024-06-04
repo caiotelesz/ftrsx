@@ -12,7 +12,7 @@ export default function Login() {
 
   async function logarConta() {
     try {
-      const url = "http://191.235.120.237:5000/user/login";
+      const url = "http:/localhost:5000/user/login";
       const r = await axios.post(url, { email, password: senha });
       const userData = r.data;
 
