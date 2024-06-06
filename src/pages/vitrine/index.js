@@ -26,13 +26,7 @@ export default function Vitrine() {
     fetchClothes();
   }, []);
 
-  if (loading) {
-    return <div>Carregando...</div>;
-  }
-
-  if (error) {
-    return <div>Erro: {error}</div>;
-  }
+  
 
   return (
     <div>
