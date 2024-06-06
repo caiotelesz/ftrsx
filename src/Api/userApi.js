@@ -10,7 +10,7 @@ export async function logarConta(email, senha, navigate) {
     const userData = r.data;
 
     if (userData && userData.loggedIn) {  
-      navigate('/funcao_admin');
+      navigate('/funcao_admin/');
     } else {
       alert("Verifique se o email ou senha está certo");
     }
