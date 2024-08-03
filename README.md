@@ -48,6 +48,9 @@ Siga os passos abaixo para executar o projeto localmente:
 
 O aplicativo estará disponível em http://localhost:3000 
 <br />
+# Link do Projeto
+**Figma:** https://www.figma.com/design/a0hFlllcSvYT2kDVWUJpxT/ftrsx?node-id=0-1&t=WNfq9O2gHLmotPBf-1
+<br />
 
 # Contribuição do projeto
 
